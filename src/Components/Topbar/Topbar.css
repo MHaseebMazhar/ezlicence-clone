@@ -1,0 +1,28 @@
+.topbar {
+  background-color: #111c2c; /* dark navy blue */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 40px;
+  font-size: 14px;
+}
+
+.topbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: 0.2s;
+}
+
+.topbar a:hover {
+  text-decoration: underline;
+}
+
+.topbar-left a:not(:last-child)::after,
+.topbar-right a:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #999;
+}

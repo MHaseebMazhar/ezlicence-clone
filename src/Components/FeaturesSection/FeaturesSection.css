@@ -1,0 +1,68 @@
+.features-section-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid */
+  gap: 30px;
+  padding: 50px 20px;
+  background-color: #f8faff; /* Light blue-grey background */
+  text-align: center;
+  font-family: Arial, sans-serif;
+  max-width: 1300px;
+  margin: 50px auto;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 150px; /* Ensure consistent height for items */
+}
+
+.feature-icon {
+  font-size: 2.5rem; /* Larger for the icons */
+  margin-bottom: 15px;
+  color: #3f51b5; /* A strong blue for icons */
+  line-height: 1; /* Adjust line height for better icon centering */
+}
+
+.number-icon {
+  font-size: 2.2rem; /* Slightly smaller for the text */
+  font-weight: bold;
+  color: #333; /* Darker color for the number */
+}
+
+.feature-title {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 180px; /* Limit width of text for better readability in columns */
+}
+.features-section-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 50px 80px;
+  background: #f9fafb;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 180px;
+}
+
+.feature-icon {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 15px;
+}
+
+.feature-item p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
