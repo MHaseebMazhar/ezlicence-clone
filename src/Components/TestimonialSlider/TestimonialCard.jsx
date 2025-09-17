@@ -1,7 +1,7 @@
 import React from 'react';
 import './TestimonialSlider.css';
 
-const TestimonialCard = ({ name, review, author, rating }) => {
+const TestimonialCard = ({ img,name, review, author, rating }) => {
   const renderStars = () => {
     const stars = [];
     for (let i = 0; i < 5; i++) {
@@ -17,7 +17,7 @@ const TestimonialCard = ({ name, review, author, rating }) => {
   return (
     <div className="testimonial-card">
       <div className="card-header">
-        <div className="profile-img"></div>
+        <div className="profile-img"><img src={img} alt=''/></div>
         <div className="header-info">
           <p className="instructor-name">{name}</p>
           <div className="rating-stars">{renderStars()}</div>
