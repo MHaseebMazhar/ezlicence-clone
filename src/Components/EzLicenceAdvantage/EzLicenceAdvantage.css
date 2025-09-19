@@ -1,15 +1,14 @@
 .advantage-container {
   max-width: 900px;
-  margin: 60px auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 30px auto;
+  font-family: "Poppins", "Segoe UI", sans-serif;
   color: #222;
   padding: 0 20px;
 }
 
-/* Title */
 .title {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 28px;
   font-weight: 700;
   color: #1a1a1a;
@@ -26,55 +25,73 @@
   border-radius: 2px;
 }
 
-/* Accordion */
-.accordion-item {
+/* Card styling */
+.accordion-item,
+.faq-item {
   background: #fff;
   border-radius: 10px;
-  margin-bottom: 15px;
   padding: 14px 18px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
-
-.accordion-item:hover {
+.accordion-item:hover,
+.faq-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-.accordion-header {
+.accordion-header,
+.faq-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
 .accordion-icon {
   width: 28px;
   height: 28px;
   margin-right: 12px;
-  flex-shrink: 0;
   border-radius: 6px;
   object-fit: contain;
 }
 
-.accordion-header span {
-  flex: 1;
-  font-size: 17px;
+.accordion-header span,
+.faq-header span {
+  font-size: 16px;
   font-weight: 500;
   color: #333;
 }
 
+/* Arrow */
 .arrow {
-  margin-left: 10px;
   font-size: 14px;
-  color: #007bff;
+  color: #494949;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.arrow.open {
+  transform: rotate(180deg);
+  color: #5c5c5c;
 }
 
+/* Accordion content */
 .accordion-content {
-  padding: 12px 10px 5px 40px;
+  max-height: 0;
+  overflow: hidden;
   font-size: 15px;
   color: #555;
   line-height: 1.5;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.accordion-content.show {
+  max-height: 300px; /* enough height */
+  padding: 12px 10px 12px 40px;
 }
 
 /* Description */
@@ -88,33 +105,4 @@
   color: #333;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   border: 1px solid #e4e9f2;
-}
-
-/* FAQ */
-.faq-item {
-  background: #fff;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  padding: 16px 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-
-.faq-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-.faq-header {
-  display: flex;
-  justify-content: space-between;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  color: #333;
-}
-
-.faq-header span {
-  color: #666666;
-  font-weight: bold;
 }
