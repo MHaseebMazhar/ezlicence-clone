@@ -1,0 +1,109 @@
+.driving-wrapper {
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Top Section */
+.driving-top {
+  background: #1c2431;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.driving-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.p-icon {
+  background: white;
+  color: green;
+  font-weight: bold;
+  font-size: 28px;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+.driving-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 25px;
+  max-width: 400px;
+  text-align: left;
+}
+
+.driving-list li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.yellow-btn {
+  background: #facc15;
+  color: black;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.yellow-btn:hover {
+  background: #eab308;
+}
+
+/* Bottom Section */
+.driving-bottom {
+  background: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.bottom-content {
+  width: 50%;         /* 👈 sirf 50% width */
+  margin: 0 auto;     /* 👈 center align */
+}
+
+.bottom-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: gray;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.feature-box {
+  padding: 15px;
+}
+
+.icon-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+
+.feature-box h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.feature-box p {
+  font-size: 14px;
+  color: #555;
+}

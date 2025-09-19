@@ -13,7 +13,7 @@ const Hero = () => {
 
       <div className="hero-text">
         <h1>Discover Top Driving Instructors Near You</h1>
-        <p>Compare, choose and book the right instructor for you.</p>
+        <p className="rating"><img src="/222.png" alt=""/>Rated <strong>4.9</strong> ⭐⭐⭐⭐⭐ (9,700)</p>
       </div>
 
       {/* search bar overlay */}

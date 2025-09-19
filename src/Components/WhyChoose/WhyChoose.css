@@ -1,0 +1,95 @@
+.why-wrapper {
+  background: #f9fafb;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.why-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.why-content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  color: #444;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.subtitle a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+      background-color: #FFBC00 !important;
+  padding: 0px 30px;
+  border-radius: 8px;
+  text-align: center;
+ 
+}
+
+.stat-box h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stat-box p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Features List */
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.features-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Button */
+.yellow-btn {
+    background-color: #FFBC00 !important;
+  color: black;
+  border: none;
+  padding: 14px 28px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.yellow-btn:hover {
+  background: #eab308;
+}
