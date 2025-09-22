@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./EzLicenceAdvantage.css";
 
 const data = [
@@ -6,52 +6,104 @@ const data = [
     id: 1,
     icon: "/download (1).jpeg",
     title: "Book driving lessons online in under 60 seconds",
-    content: "Quickly book lessons online with our easy-to-use platform.",
+    content:
+      "Booking driving lessons through EzLicence is a quick and hassle free process that gives you all the choice and control. Why deal with traditional Driving Schools over the phone or by email when you can manage your driving instructor choice & book driving lessons yourself anywhere, and at any time through our secure online platform?",
   },
   {
     id: 2,
     icon: "/finger.png",
     title: "More control over your bookings",
-    content: "Manage and reschedule your lessons anytime.",
+    content:
+      "Booking driving lessons through EzLicence is a quick and hassle free process that gives you all the choice and control. Why deal with traditional Driving Schools over the phone or by email when you can manage your driving instructor choice & book driving lessons yourself anywhere, and at any time through our secure online platform?",
   },
   {
     id: 3,
     icon: "/5394916.png",
     title: "Your online dashboard",
-    content: "Track your progress and stay updated.",
+    content:
+      "Booking driving lessons through EzLicence is a quick and hassle free process that gives you all the choice and control. Why deal with traditional Driving Schools over the phone or by email when you can manage your driving instructor choice & book driving lessons yourself anywhere, and at any time through our secure online platform?",
   },
   {
     id: 4,
     icon: "/images (2).png",
     title: "A wide range of driving instructors",
-    content: "Choose from verified and experienced instructors.",
+    content:
+      "Booking driving lessons through EzLicence is a quick and hassle free process that gives you all the choice and control. Why deal with traditional Driving Schools over the phone or by email when you can manage your driving instructor choice & book driving lessons yourself anywhere, and at any time through our secure online platform?",
   },
   {
     id: 5,
     icon: "/images (1).png",
     title: "Servicing YOUR area",
-    content: "Find instructors near your location easily.",
+    content:
+      "Booking driving lessons through EzLicence is a quick and hassle free process that gives you all the choice and control. Why deal with traditional Driving Schools over the phone or by email when you can manage your driving instructor choice & book driving lessons yourself anywhere, and at any time through our secure online platform?",
   },
 ];
 
 const bottomFaqs = [
-  { id: 1, title: "How do I find private driving instructors near me?", content: "You can search our platform, filter by location and availability." },
-  { id: 2, title: "EzLicence: Driving Lessons, Your Way.", content: "We provide flexibility, transparency and verified instructors." },
-  { id: 3, title: "Why We’re a Leading Learner Driver Platform in the UK", content: "Because we simplify booking, managing, and tracking lessons." },
-  { id: 4, title: "Driving Instructors & Driving Schools You Can Rely On", content: "All our instructors are certified and reviewed by learners." },
+  {
+    id: 1,
+    title: "How do I find private driving instructors near me?",
+    content:
+      "Booking driving lessons through EzLicence is a quick and hassle free process that gives you all the choice and control. Why deal with traditional Driving Schools over the phone or by email when you can manage your driving instructor choice & book driving lessons yourself anywhere, and at any time through our secure online platform?",
+  },
+  {
+    id: 2,
+    title: "EzLicence: Driving Lessons, Your Way.",
+    content:
+      "Booking driving lessons through EzLicence is a quick and hassle free process that gives you all the choice and control. Why deal with traditional Driving Schools over the phone or by email when you can manage your driving instructor choice & book driving lessons yourself anywhere, and at any time through our secure online platform?",
+  },
+  {
+    id: 3,
+    title: "Why We’re a Leading Learner Driver Platform in the UK",
+    content:
+      "Booking driving lessons through EzLicence is a quick and hassle free process that gives you all the choice and control. Why deal with traditional Driving Schools over the phone or by email when you can manage your driving instructor choice & book driving lessons yourself anywhere, and at any time through our secure online platform?",
+  },
+  {
+    id: 4,
+    title: "Driving Instructors & Driving Schools You Can Rely On",
+    content:
+      "Booking driving lessons through EzLicence is a quick and hassle free process that gives you all the choice and control. Why deal with traditional Driving Schools over the phone or by email when you can manage your driving instructor choice & book driving lessons yourself anywhere, and at any time through our secure online platform?",
+  },
 ];
+
+const AccordionItem = ({ item, isOpen, onToggle }) => {
+  const contentRef = useRef(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      // include padding in calculation
+      setHeight(isOpen ? contentRef.current.scrollHeight + 20 : 0);
+    }
+  }, [isOpen]);
+
+  return (
+    <div className="accordion-item">
+      <div className="accordion-header" onClick={onToggle}>
+        <div className="header-left">
+          {item.icon && (
+            <img src={item.icon} alt="icon" className="accordion-icon" />
+          )}
+          <span>{item.title}</span>
+        </div>
+        <span className={`arrow ${isOpen ? "open" : ""}`}>▼</span>
+      </div>
+
+      <div
+        className={`accordion-content-wrapper ${isOpen ? "open" : ""}`}
+        style={{ height: height }}
+      >
+        <div ref={contentRef} className="accordion-content1">
+          <p>{item.content}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const EzLicenceAdvantage = () => {
   const [openAccordion, setOpenAccordion] = useState(null);
   const [openFaq, setOpenFaq] = useState(null);
-
-  const toggleAccordion = (id) => {
-    setOpenAccordion(openAccordion === id ? null : id);
-  };
-
-  const toggleFaq = (id) => {
-    setOpenFaq(openFaq === id ? null : id);
-  };
 
   return (
     <div className="advantage-container">
@@ -60,22 +112,14 @@ const EzLicenceAdvantage = () => {
       {/* Top Accordion */}
       <div className="accordion">
         {data.map((item) => (
-          <div key={item.id} className="accordion-item">
-            <div className="accordion-header" onClick={() => toggleAccordion(item.id)}>
-              <div className="header-left">
-                <img src={item.icon} alt="icon" className="accordion-icon" />
-                <span>{item.title}</span>
-              </div>
-              <span className={`arrow ${openAccordion === item.id ? "open" : ""}`}>
-                ▼
-              </span>
-            </div>
-            <div
-              className={`accordion-content ${openAccordion === item.id ? "show" : ""}`}
-            >
-              {item.content}
-            </div>
-          </div>
+          <AccordionItem
+            key={item.id}
+            item={item}
+            isOpen={openAccordion === item.id}
+            onToggle={() =>
+              setOpenAccordion(openAccordion === item.id ? null : item.id)
+            }
+          />
         ))}
       </div>
 
@@ -83,25 +127,28 @@ const EzLicenceAdvantage = () => {
       <div className="description-box">
         <p>
           At EzLicence, we understand that getting your driver’s licence is both
-          exciting and daunting. Our platform makes booking driving lessons and
-          passing your test easier than ever!
+          exciting and daunting. Before you’re out on the wide open roads, you
+          need to navigate booking driving lessons with an instructor that you
+          feel comfortable with. And they’ll need to live close to you. Then
+          there’s scheduling lesson times that suit your lifestyle – and theirs.
+          All of this can make the journey to getting your full driver’s licence
+          feel overwhelming So, we’ve set out to change the process for the
+          better. If you’re ready for learner driver lessons, you’re likely to
+          be asking yourself: “who’s the best driving instructor near me?” Our
+          online platform, EzLicence, makes booking driving lessons and passing
+          your driving test easier than ever!
         </p>
       </div>
 
       {/* Bottom FAQ Accordion */}
       <div className="faq">
         {bottomFaqs.map((faq) => (
-          <div key={faq.id} className="faq-item">
-            <div className="faq-header" onClick={() => toggleFaq(faq.id)}>
-              <span>{faq.title}</span>
-              <span className={`arrow ${openFaq === faq.id ? "open" : ""}`}>▼</span>
-            </div>
-            <div
-              className={`accordion-content ${openFaq === faq.id ? "show" : ""}`}
-            >
-              {faq.content}
-            </div>
-          </div>
+          <AccordionItem
+            key={faq.id}
+            item={faq}
+            isOpen={openFaq === faq.id}
+            onToggle={() => setOpenFaq(openFaq === faq.id ? null : faq.id)}
+          />
         ))}
       </div>
     </div>

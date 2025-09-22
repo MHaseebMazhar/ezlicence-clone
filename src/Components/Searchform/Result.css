@@ -1,0 +1,81 @@
+.results-container {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.results-container h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.instructor-list {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.instructor-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.instructor-card .images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.instructor-img, .car-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.price {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.book-btn {
+  background: #ffc107;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.book-btn:hover {
+  background: #e0a800;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.action-btn {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.action-btn:hover {
+  background: #f7f7f7;
+}

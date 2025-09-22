@@ -2,17 +2,17 @@
   background: #f9fafb;
   padding: 60px 20px;
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 .why-content {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .why-content h2 {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 32px;
+  font-weight: 700;
   margin-bottom: 15px;
 }
 
@@ -20,7 +20,7 @@
   color: #444;
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .subtitle a {
@@ -32,38 +32,40 @@
 /* Stats Section */
 .stats {
   display: flex;
-  justify-content: space-evenly;
-  gap: 40px;
-  margin-bottom: 40px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px; /* small gap */
+  margin-bottom: 50px;
   flex-wrap: wrap;
 }
 
 .stat-box {
-      background-color: #FFBC00 !important;
-  padding: 0px 30px;
+  background-color: #ffbc00;
+  padding: 10px 55px;
   border-radius: 8px;
   text-align: center;
- 
+
 }
 
-.stat-box h3 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 5px;
+.stat-box h1 {
+
+  font-weight: 500;
+ 
 }
 
 .stat-box p {
   font-size: 16px;
   font-weight: 500;
+
 }
 
 /* Features List */
 .features-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   text-align: left;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .features-list ul {
@@ -73,23 +75,33 @@
 }
 
 .features-list li {
-  margin-bottom: 12px;
-  font-size: 14px;
+  margin-bottom: 14px;
+  font-size: 15px;
   color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.features-list li::before {
+  content: "✔";
+  color: #ffbc00;
+  font-weight: bold;
 }
 
 /* Button */
 .yellow-btn {
-    background-color: #FFBC00 !important;
-  color: black;
+  background-color: #ffbc00;
+  color: #000;
   border: none;
-  padding: 14px 28px;
+  padding: 14px 30px;
   font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 16px;
   transition: background 0.3s;
 }
 
 .yellow-btn:hover {
-  background: #eab308;
+  background: #e5a800;
 }

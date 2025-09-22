@@ -1,0 +1,237 @@
+.profile-container {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  
+  min-height: 100vh;
+}
+
+.back-btn {
+  color: #007bff;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.profile-header-card {
+  display: flex;
+  flex-direction: column;
+  
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 80%;
+}
+
+.profile-info {
+  background-color: #ffc107;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-info h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-images {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.profile-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-car-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  bottom: -15px;
+  left: 60px;
+  border: 2px solid #fff;
+  z-index: 1;
+}
+
+.profile-name{
+   margin-left: 5%   ;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.profile-details {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+.profile-bio-section {
+  flex: 2;
+}
+
+.profile-bio-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.bio-details p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.languages-section {
+  margin-top: 20px;
+}
+
+.language-tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.language-tag {
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 14px;
+}
+
+.reviews-section {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.reviews-section p {
+  color: #777;
+}
+
+.pricing-section {
+  flex: 1;
+}
+
+.pricing-card {
+  background: #fcfcfc;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-item h4 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.save-tag {
+      background-color: #12B76A !important;
+  color: #fff;
+ 
+  padding: 2px 8px;
+  border-radius: 14px;
+}
+
+.offers-text {
+  color: #777;
+  font-size: 14px;
+}
+
+.book-btn, .check-availability-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.book-btn {
+  background: #ffc107;
+  color: #333;
+}
+
+.check-availability-btn {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.payment-icons img {
+  height: 25px;
+}
+
+.pay-in-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.cancellation-info, .instructor-choice, .booking-info, .availability-info {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+
+.cancellation-info span, .instructor-choice span, .booking-info span, .availability-info span {
+  font-size: 24px;
+}
+
+.cancellation-info p:first-child, .instructor-choice p:first-child, .booking-info p:first-child, .availability-info p:first-child {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.more-info-dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.more-info-dropdown p {
+    font-weight: bold;
+    color: #444;
+}
+
+.more-info-dropdown span {
+    transform: rotate(-90deg);
+    font-size: 18px;
+    color: #888;
+}

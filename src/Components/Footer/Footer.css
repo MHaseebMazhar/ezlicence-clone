@@ -87,7 +87,7 @@
 }
 
 .phone-number {
-  font-weight: bold;
+ 
   margin-left: 8px;
 }
 
@@ -138,29 +138,3 @@
   color: #000;
 }
 
-.support-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 50;
-}
-
-.support-btn button {
-  background: #4c5c6f;
-  color: white;
-  border-radius: 50%;
-  padding: 14px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  transition: 0.3s ease;
-}
-
-.support-btn button:hover {
-  background: #3b4656;
-}
-
-.support-btn .icon {
-  width: 24px;
-  height: 24px;
-}
