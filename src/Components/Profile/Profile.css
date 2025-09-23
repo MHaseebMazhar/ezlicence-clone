@@ -1,60 +1,62 @@
-
-
+/* Existing styles */
 .back-btn {
-  color: #000000;
+  color: #000;
   cursor: pointer;
-  margin-bottom: 20px;
-  font-weight: bold;
-    margin-left: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
 }
 
 .profile-container {
   display: flex;
-  flex-direction: column; /* vertical stack */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
- 
   min-height: 100vh;
- 
 }
 
 .profile-info {
-  width: 100%; /* full width */
+  width: 100%;
   background-color: #ffc107;
-  padding: 20px 0px 20px 0px;
+  padding: 15px 0;
   display: flex;
   align-items: center;
-  
 }
 
 .profile-header-card {
-  width: 70%; /* rest content stays centered */
+  width: 66%;
   background: #fff;
- 
   display: flex;
   flex-direction: column;
 }
 
+.profile-details {
+  display: flex;
+  gap: 20px;
+}
 
-
+.profile-bio-section {
+  flex: 2;
+  margin-top: -80px;
+  padding: 30px;
+}
 
 .profile-images {
   display: flex;
   align-items: flex-end;
   position: relative;
 }
+
 .profile-images h2 {
   margin-left: 100px;
-      font-weight: 500;
-    margin: 0px;
-    font-style: normal;
-    font-family: "Poppins", sans-serif;
-    font-size: 36px;
-    line-height: 1.1;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  line-height: 1.1;
 }
+
 .profile-img {
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 4px solid #fff;
   object-fit: cover;
@@ -63,69 +65,56 @@
 }
 
 .profile-car-img {
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   position: relative;
-  
   left: -20px;
   border: 2px solid #fff;
   z-index: 1;
 }
 
-.profile-name {
-  margin-left: 5%;
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-}
-
-.profile-details {
-  display: flex;
-  gap: 30px;
-  padding: 30px;
-}
-
-.profile-bio-section {
-  flex: 2;
-  margin-top: -100px;
-}
-
-.profile-bio-section h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.bio-details {
+  margin-top: 25px;
 }
 
 .bio-details p {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 5px 0;
+  margin: 15px 0;
 }
 
 .languages-section {
-  margin-top: 20px;
+  margin: 40px 0;
 }
 
 .language-tags {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
+  
 }
 
 .language-tag {
-  background-color: #e0e0e0;
+    color: white;
+    background: #667085;
   border-radius: 20px;
   padding: 5px 15px;
-  font-size: 14px;
+  font-weight: 500;
+    margin: 0px;
+    font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .reviews-section {
-  margin-top: 20px;
-  border-top: 1px solid #eee;
-  padding-top: 20px;
+
+  border-bottom: 1px solid #eee;
+
 }
 
 .reviews-section p {
@@ -136,31 +125,85 @@
   flex: 1;
 }
 
-.pricing-card {
-  background: #ffffff;
+.pricing-card,
+.pricing-card1,
+.pricing-card2 {
+  background: #fff;
   border-radius: 12px;
   border: 1px solid #ddd;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  padding: 20px;
+  margin-top: 25px;
+}
+
+.pricing-card {
+  padding: 25px 20px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
   width: 80%;
 }
 
-.price-item {
+.pricing-card1 {
+  padding: 10px;
+  width: 85%;
+}
+
+.booking-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  width: 82%;
+  max-width: 380px;
+  margin-top: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.booking-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.booking-row:last-of-type {
+  border-bottom: none;
+}
+
+.icon {
+  font-size: 20px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.title1 {
+  display: flex;
+  align-items: flex-start;
+  font-weight: 600;
+  margin: 0;
+  font-size: 15px;
+ 
+}
+
+.subtitle {
+  margin: 2px 0 0;
+  font-size: 13px;
+ 
+  line-height: 1.4;
+}
+
+
+
+
+.price-item,
+.price-item1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.price-item h4 {
-  font-size: 16px;
-  margin: 0;
-}
-
 .save-tag {
-  background-color: #12B76A;
+  background-color: #12b76a;
   color: #fff;
   padding: 2px 8px;
   border-radius: 14px;
@@ -184,36 +227,38 @@
 .book-btn {
   background: #ffc107;
   color: #333;
+  margin-bottom: 20px;
 }
 
 .check-availability-btn {
   background: #fff;
   border: 1px solid #ccc;
   color: #333;
+  margin-bottom: 10px;
 }
 
 .payment-icons {
   display: flex;
-  gap: 10px;
-  justify-content: flex-start;
+  gap: 20px;
+  justify-content: center;
   margin-top: 10px;
 }
 
 .payment-icons img {
-  height: 25px;
+  height: 35px;
+  object-fit: contain;
 }
 
 .pay-in-4 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 5px;
-  font-size: 14px;
-  margin-top: 10px;
+  gap: 10px;
+  padding: 10px 0 10px 0;
 }
 
 .pay-in-4 img {
-  height: 18px;
+  height: 25px;
 }
 
 .cancellation-info,
@@ -223,7 +268,7 @@
   display: flex;
   gap: 5px;
   align-items: flex-start;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .cancellation-info span,
@@ -232,19 +277,6 @@
 .availability-info span {
   font-size: 24px;
   line-height: 1;
-  vertical-align: middle;
-}
-
-.cancellation-info p:first-child,
-.instructor-choice p:first-child,
-.booking-info p:first-child,
-.availability-info p:first-child {
-  font-weight: 500;
-  color: #1F2A37;
-  line-height: 1.3;
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 2px;
 }
 
 .more-info-dropdown {
@@ -253,7 +285,7 @@
   align-items: center;
   border-top: 1px solid #eee;
   padding-top: 5px;
-  margin-top: 5px;
+  margin-top: 10px;
   cursor: pointer;
 }
 
@@ -266,5 +298,182 @@
   font-size: 18px;
   color: #888;
   display: inline-block;
-  transform: rotate(-90deg); /* Keep only if using chevron icons */
+  transform: rotate(-90deg);
+}
+
+.custom-line {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+.accordion-content2 {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.accordion-content2 ul {
+  margin: 10px 0 0 20px;
+  padding: 0;
+  list-style-type: disc;
+}
+.accordion-content2 li {
+  margin-bottom: 6px;
+}
+
+
+/* New styles for Vehicle and Map section */
+.profile-vehicle-card {
+  width: 80%;
+ 
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.profile-vehicle-card h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.vehicle-details {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.vehicle-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.vehicle-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.service-area {
+  display: flex;
+  flex-direction: column;
+  width: 88%;
+  
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.service-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.service-header p {
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+
+.map-caption {
+  text-align: center;
+  color: #777;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .profile-header-card {
+        width: 85%;
+    }
+    .profile-images h2 {
+        font-size: 28px;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-details {
+        flex-direction: column;
+    }
+    .profile-bio-section {
+        margin-top: -40px;
+        padding: 20px;
+    }
+    .profile-img, .profile-car-img {
+        width: 120px;
+        height: 120px;
+    }
+    .profile-images h2 {
+        font-size: 24px;
+        margin-left: 20px;
+    }
+    .pricing-card, .pricing-card1, .pricing-card2, .profile-vehicle-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-btn {
+        margin-left: 20px;
+        font-size: 14px;
+    }
+    .profile-images {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .profile-images h2 {
+        margin-left: 0;
+        font-size: 20px;
+    }
+    .profile-img, .profile-car-img {
+        width: 100px;
+        height: 100px;
+    }
+    .book-btn, .check-availability-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+.postcode-list {
+  margin: 10px 0;
+  padding-left: 20px;
+  list-style-type: disc;
+  font-size: 15px;
+  color: #333;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 8px 30px; /* row gap + column gap */
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

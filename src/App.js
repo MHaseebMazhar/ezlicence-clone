@@ -11,6 +11,7 @@ import EzLicenceAdvantage from './Components/EzLicenceAdvantage/EzLicenceAdvanta
 import Footer from './Components/Footer/Footer';
 import Results from './Components/Searchform/Result';
 import Profile from './Components/Profile/Profile';
+import Amount from "./Components/Amount/Amount";
 function App() {
   return (
     <BrowserRouter>
@@ -35,6 +36,7 @@ function App() {
         />
         <Route path="/results" element={<Results />} />
         <Route path="/profile/:instructorId" element={<Profile />} />
+        <Route path="/amount" element={<Amount />} />
       </Routes>
     </BrowserRouter>
   );
