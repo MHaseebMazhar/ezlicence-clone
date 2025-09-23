@@ -175,7 +175,7 @@ const [isOpen, setIsOpen] = useState(false);
                 <div className="instructor-info">
                   <img
                     className="profile-pic"
-                    src="/instructor.png"
+                    src="/_367_-_ALAM__Nadira_(3)-4c0f8b642e84821d28e9a088aca20ec0.png"
                     alt="Instructor"
                   />
                   <div className="instructor-text">
