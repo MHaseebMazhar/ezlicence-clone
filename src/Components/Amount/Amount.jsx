@@ -6,7 +6,7 @@ const Amount = () => {
 
   const pricePerHour = 40; // £40 per hour
   const platformFee = 58.32; // ✅ match screenshot
-const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const formatCurrency = (amount) =>
     new Intl.NumberFormat("en-GB", {
       style: "currency",
@@ -26,7 +26,7 @@ const [isOpen, setIsOpen] = useState(false);
   const HandleContinue = () => {
     // Navigate to the book lessons page
     window.location.href = "/book-lessons";
-  }
+  };
   const discountPercent = getDiscountPercent(selectedHours);
   const basePrice = selectedHours * pricePerHour;
   const discountAmount = (basePrice * discountPercent) / 100;
@@ -44,7 +44,9 @@ const [isOpen, setIsOpen] = useState(false);
           />
         </div>
         <div className="header-right">
-          <span className="user-icon">👤</span>
+       <svg width="16" height="18" viewBox="0 0 16 18" fill="none" color="#475467" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.6654 16.5C14.6654 15.337 14.6654 14.7555 14.5218 14.2824C14.1987 13.217 13.365 12.3834 12.2996 12.0602C11.8265 11.9167 11.245 11.9167 10.082 11.9167H5.91537C4.7524 11.9167 4.17091 11.9167 3.69775 12.0602C2.63241 12.3834 1.79873 13.217 1.47556 14.2824C1.33203 14.7555 1.33203 15.337 1.33203 16.5M11.7487 5.25C11.7487 7.32107 10.0698 9 7.9987 9C5.92763 9 4.2487 7.32107 4.2487 5.25C4.2487 3.17893 5.92763 1.5 7.9987 1.5C10.0698 1.5 11.7487 3.17893 11.7487 5.25Z" stroke="currentColor"stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
           <a
             href="https://www.ezlicence.co.uk/learner/purchase-step/booking_credit"
             className="login-link"
@@ -58,22 +60,21 @@ const [isOpen, setIsOpen] = useState(false);
       <main className="main">
         {/* Progress Bar */}
         <div className="progress-container">
+          <div className="progress-line"></div>
           {[
             { step: 1, label: "Instructor" },
             { step: 2, label: "Amount" },
             { step: 3, label: "Book your lessons" },
             { step: 4, label: "Learner Registration" },
             { step: 5, label: "Payment" },
-          ].map((item, index) => (
-            <React.Fragment key={item.step}>
-              <div
-                className={`progress-step ${item.step === 2 ? "active" : ""}`}
-              >
-                <div className="step-circle">{item.step}</div>
-                <div className="step-label">{item.label}</div>
-              </div>
-              {index < 4 && <div className="progress-line"></div>}
-            </React.Fragment>
+          ].map((item) => (
+            <div
+              key={item.step}
+              className={`progress-step ${item.step === 2 ? "active" : ""}`}
+            >
+              <div className="step-circle">{item.step}</div>
+              <div className="step-label">{item.label}</div>
+            </div>
           ))}
         </div>
 
@@ -113,35 +114,37 @@ const [isOpen, setIsOpen] = useState(false);
                     needing a driving skill refresh.
                   </p>
                 </div>
-<div className="option selected">
-      <div
-        className="custom-dropdown-input"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {selectedHours
-          ? `${selectedHours} hour${
-              selectedHours > 1 ? "s" : ""
-            }  - ${getDiscountPercent(selectedHours)}% OFF`
-          : "Select custom hours"}
-        <span className="arrow">{isOpen ? "▲" : "▼"}</span>
-      </div>
+                <div className="option selected">
+                  <div
+                    className="custom-dropdown-input"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    {selectedHours
+                      ? `${selectedHours} hour${
+                          selectedHours > 1 ? "s" : ""
+                        }  - ${getDiscountPercent(selectedHours)}% OFF`
+                      : "Select custom hours"}
+                    <span className="arrow">{isOpen ? "▲" : "▼"}</span>
+                  </div>
 
-      {isOpen && (
-        <div className="custom-dropdown-menu">
-          {Array.from({ length: 99 }, (_, i) => i + 1).map((hour) => (
-            <div
-              key={hour}
-              className="dropdown-item"
-              onClick={() => handleSelect(hour)}
-            >
-              {hour} hour{hour > 1 ? "s" : ""}{" "}
-              {getDiscountPercent(hour) > 0 &&
-                `- ${getDiscountPercent(hour)}% OFF`}
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
+                  {isOpen && (
+                    <div className="custom-dropdown-menu">
+                      {Array.from({ length: 99 }, (_, i) => i + 1).map(
+                        (hour) => (
+                          <div
+                            key={hour}
+                            className="dropdown-item"
+                            onClick={() => handleSelect(hour)}
+                          >
+                            {hour} hour{hour > 1 ? "s" : ""}{" "}
+                            {getDiscountPercent(hour) > 0 &&
+                              `- ${getDiscountPercent(hour)}% OFF`}
+                          </div>
+                        )
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
 
               {/* Tips Section */}
@@ -226,7 +229,9 @@ const [isOpen, setIsOpen] = useState(false);
               <p className="installments">
                 Or 4 payments of {formatCurrency(totalDue / 4)}
               </p>
-              <button className="btn-primary" onClick={HandleContinue}>Continue</button>
+              <button className="btn-primary" onClick={HandleContinue}>
+                Continue
+              </button>
             </div>
 
             {/* Info Cards */}

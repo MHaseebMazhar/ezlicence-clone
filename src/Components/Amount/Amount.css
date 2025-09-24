@@ -1,7 +1,9 @@
 /* General Layout */
 
 .logo3 {
-  height: 32px;
+     width:36%;
+    height: 100%;
+  margin-left: 24px;
 }
 
 /* Header - full width */
@@ -10,15 +12,18 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 0px;
-  background: #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  
+ background: #fff;
+border-bottom: 1px solid #D2D6DB;
+  
   width: 100%; /* ✅ full width */
+  height: 56px; /* consistent height */
 }
 
 /* App Container - sirf background aur font */
 .app-container {
+  background: #F3F4F6;
   min-height: 100vh;
-  background: #f7f7f7;
   font-family: "Segoe UI", Arial, sans-serif;
   color: #333;
 }
@@ -28,6 +33,7 @@
   width: 60%;              /* ✅ 66% width */
   margin: 0 auto;          /* ✅ center horizontally */
   padding: 20px 0;
+  
 }
 
 /* Progress bar ko bhi main ke andar center align rakhega */
@@ -54,55 +60,75 @@
 .header-right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
+  margin-right: 26px;
 }
 .login-link {
-  font-size: 14px;
+ font-size: 16px;
+    line-height: 24px;
   color: #555;
   text-decoration: none;
+  font-family: 'POPPINS', sans-serif;
 }
 .user-icon {
   font-size: 18px;
   color: #555;
 }
 
-/* Progress Bar */
 .progress-container {
   display: flex;
-  justify-content: center;
-  margin: 30px 0;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
+
+/* single line across container */
+.progress-line {
+  position: absolute;
+  top: 30%;                /* center vertically */
+  left: 10px;
+  right: 5px;
+  height: 2px;
+  background: #ddd;
+  z-index: 0;
+}
+
 .progress-step {
   position: relative;
   text-align: center;
+  z-index: 1;              /* circles stay above line */
+  
 }
+
 .step-circle {
-  width: 40px;
-  height: 40px;
-  border: 2px solid #bbb;
+      color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border: 2px solid hsl(0, 1%, 50%);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  background: hsl(0, 1%, 50%);
+  margin: 0 auto;
 }
+
 .step-label {
   margin-top: 6px;
   font-size: 12px;
   color: #666;
 }
+
 .progress-step.active .step-circle {
-  border-color: #2563eb;
-  background: #2563eb;
+  border-color:  #101828;
+    background-color: #101828;
   color: #fff;
 }
+
 .progress-step.active .step-label {
-  color: #2563eb;
+  color:  #101828;
   font-weight: 600;
-}
-.progress-line {
-  flex: 1;
-  border-top: 2px solid #ddd;
-  margin: 0 12px;
 }
 
 /* Main Content */
