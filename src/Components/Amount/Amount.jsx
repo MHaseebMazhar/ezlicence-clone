@@ -23,6 +23,10 @@ const [isOpen, setIsOpen] = useState(false);
     setSelectedHours(hour);
     setIsOpen(false);
   };
+  const HandleContinue = () => {
+    // Navigate to the book lessons page
+    window.location.href = "/book-lessons";
+  }
   const discountPercent = getDiscountPercent(selectedHours);
   const basePrice = selectedHours * pricePerHour;
   const discountAmount = (basePrice * discountPercent) / 100;
@@ -222,7 +226,7 @@ const [isOpen, setIsOpen] = useState(false);
               <p className="installments">
                 Or 4 payments of {formatCurrency(totalDue / 4)}
               </p>
-              <button className="btn-primary">Continue</button>
+              <button className="btn-primary" onClick={HandleContinue}>Continue</button>
             </div>
 
             {/* Info Cards */}

@@ -1,0 +1,162 @@
+.page-container1 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  color: #222;
+}
+
+/* Progress Bar */
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.step1 {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 3px solid #ddd;
+  color: #999;
+  font-size: 14px;
+}
+
+.step1.completed1 {
+ 
+  color: #000;
+}
+
+.step1 .active {
+  border-color: #000;
+  font-weight: bold;
+  color: #000;
+}
+
+.page-title {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Layout */
+.main-layout {
+  display: flex;
+  gap: 30px;
+}
+
+/* Left Section */
+.left-section1{
+  flex: 2;
+}
+
+.lesson-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+}
+
+.lesson-card h3 {
+  margin-bottom: 15px;
+}
+
+.lesson-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lesson-col {
+  flex: 1;
+}
+
+.label {
+  color: #777;
+  font-size: 13px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* Tip Box */
+.tip-box1 {
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 14px;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.05);
+}
+
+/* Order Summary */
+.order-summary {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+}
+
+.order-summary h3 {
+  margin-bottom: 15px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.summary-row.green1{
+  color: green;
+}
+
+.summary-row.total {
+  font-weight: bold;
+}
+
+.installments1 {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.btn-primary1 {
+  width: 100%;
+  padding: 12px;
+  background: #ffc107;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+  background: #eee;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.extra-info {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #555;
+}
+
+.extra-info p {
+  margin-bottom: 12px;
+}

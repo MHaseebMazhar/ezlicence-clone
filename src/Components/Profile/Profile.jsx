@@ -76,7 +76,7 @@ const Profile = () => {
                 <img
                   src={instructor.image}
                   alt={instructor.name}
-                  className="profile-img"
+                  className="profile-img1"
                 />
                 <img
                   src={instructor.car}

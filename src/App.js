@@ -9,9 +9,10 @@ import DrivingTestPackage from './Components/DrivingTestPackage/DrivingTestPacka
 import WhyChoose from './Components/WhyChoose/WhyChoose';
 import EzLicenceAdvantage from './Components/EzLicenceAdvantage/EzLicenceAdvantage';
 import Footer from './Components/Footer/Footer';
-import Results from './Components/Searchform/Result';
+import Results from './Components/Results/Result';
 import Profile from './Components/Profile/Profile';
 import Amount from "./Components/Amount/Amount";
+import BookLessons from "./Components/BookLessons/BookLessons";
 function App() {
   return (
     <BrowserRouter>
@@ -37,6 +38,7 @@ function App() {
         <Route path="/results" element={<Results />} />
         <Route path="/profile/:instructorId" element={<Profile />} />
         <Route path="/amount" element={<Amount />} />
+        <Route path="/book-lessons" element={<BookLessons />} />
       </Routes>
     </BrowserRouter>
   );
