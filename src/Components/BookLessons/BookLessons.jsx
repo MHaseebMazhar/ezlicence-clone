@@ -13,7 +13,9 @@ const BookLessons = () => {
   const discountAmount = (bookingCredit * discountPercent) / 100;
   const totalDue = bookingCredit - discountAmount + platformFee;
   const installment = (totalDue / 4).toFixed(2);
-
+ const HandleBookingform=()=>{
+  window.location.href="/booking-form"
+ }
   return (
     <> {/* Header */}
       <header className="header">
@@ -119,7 +121,7 @@ const BookLessons = () => {
           <p className="installments1">
             Or 4 payments of £{installment}
           </p>
-          <button className="btn-primary1">Book Now</button>
+          <button className="btn-primary1" onClick={HandleBookingform}>Book Now</button>
           <button className="btn-secondary">Book Later</button>
 
           <div className="extra-info">
