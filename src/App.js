@@ -14,6 +14,7 @@ import Profile from './Components/Profile/Profile';
 import Amount from "./Components/Amount/Amount";
 import BookLessons from "./Components/BookLessons/BookLessons";
 import BookingForm from "./Components/BookingForm/BookingForm";
+import Support from "./Components/Support/Support";
 function App() {
   return (
     <BrowserRouter>
@@ -41,6 +42,7 @@ function App() {
         <Route path="/amount" element={<Amount />} />
         <Route path="/book-lessons" element={<BookLessons />} />
         <Route path="/booking-form" element={<BookingForm />} />
+        <Route path="/support" element={<Support />} />
       </Routes>
     </BrowserRouter>
   );

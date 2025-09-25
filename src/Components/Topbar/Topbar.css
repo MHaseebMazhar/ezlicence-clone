@@ -16,7 +16,16 @@
           text-decoration: none;
           transition: color 0.2s;
         }
-        
+        .buttontop{  color: white;
+          text-decoration: none;
+          transition: color 0.2s;
+        }
+        .buttontop:hover {
+          color: #ffc600; /* Yellow on hover */
+        }
+        .buttontop:active {
+            color: #ffc600; /* Yellow when clicked */
+        }
         .topbar a:hover {
           color: #ffc600; /* Yellow on hover */
         }

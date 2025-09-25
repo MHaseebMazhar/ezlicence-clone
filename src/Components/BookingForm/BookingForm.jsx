@@ -2,126 +2,139 @@ import React, { useState } from "react";
 import "./BookingForm.css";
 
 const BookingForm = () => {
-  const [bookingType, setBookingType] = useState("1-Hour Lesson");
-  const [selectedTime, setSelectedTime] = useState("");
+  const [lessonType, setLessonType] = useState("1-hour");
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const [location, setLocation] = useState("123 Placeholder Street, London, NW1 6XE");
 
   return (
-    
-    <div className="booking-container">
-      {/* Header */}
-      <div className="booking-header">
-        <h1>Book your lessons</h1>
-        <p>Book now or later from your dashboard.</p>
-      </div>
-
-      <div className="booking-content">
-        {/* Left Side Form */}
+    <>  {/* Header */}
+      <header className="header">
+        <div className="logo-container3">
+          <img
+            src="/logo-ezlicence-simple-coloured-4f13463a55c628f757204c7ee1e6efb980c37ea9070beac8b9e5166fda60538f.png"
+            alt="EzLicence Logo"
+            className="logo3"
+          />
+        </div>
+        <div className="header-right">
+       <svg width="16" height="18" viewBox="0 0 16 18" fill="none" color="#475467" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.6654 16.5C14.6654 15.337 14.6654 14.7555 14.5218 14.2824C14.1987 13.217 13.365 12.3834 12.2996 12.0602C11.8265 11.9167 11.245 11.9167 10.082 11.9167H5.91537C4.7524 11.9167 4.17091 11.9167 3.69775 12.0602C2.63241 12.3834 1.79873 13.217 1.47556 14.2824C1.33203 14.7555 1.33203 15.337 1.33203 16.5M11.7487 5.25C11.7487 7.32107 10.0698 9 7.9987 9C5.92763 9 4.2487 7.32107 4.2487 5.25C4.2487 3.17893 5.92763 1.5 7.9987 1.5C10.0698 1.5 11.7487 3.17893 11.7487 5.25Z" stroke="currentColor"stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          <a
+            href="https://www.ezlicence.co.uk/learner/purchase-step/booking_credit"
+            className="login-link"
+          >
+            Log In
+          </a>
+        </div>
+      </header>
+      
+    <div className="page-container">
+     {/* Progress Bar */}
+        <div className="progress-container">
+          <div className="progress-line"></div>
+          {[
+            { step: 1, label: "Instructor" },
+            { step: 2, label: "Amount" },
+            { step: 3, label: "Book your lessons" },
+            { step: 4, label: "Learner Registration" },
+            { step: 5, label: "Payment" },
+          ].map((item) => (
+            <div
+              key={item.step}
+              className={`progress-step ${item.step === 2 ? "active" : ""}`}
+            >
+              <div className="step-circle">{item.step}</div>
+              <div className="step-label">{item.label}</div>
+            </div>
+          ))}
+        </div>
+          <h2>Book your lessons</h2>
+          <p className="subtitle">Book now or later from your dashboard.</p>
+      <div className="content">
+        {/* Left Form */}
         <div className="form-card">
-          <h2>New Booking</h2>
 
-          {/* Booking Type */}
-          <div className="booking-type">
-            <button
-              className={bookingType === "1-Hour Lesson" ? "active" : ""}
-              onClick={() => setBookingType("1-Hour Lesson")}
-            >
-              1-Hour Lesson
-            </button>
-            <button
-              className={bookingType === "2-Hour Lesson" ? "active" : ""}
-              onClick={() => setBookingType("2-Hour Lesson")}
-            >
-              2-Hour Lesson
-            </button>
-          </div>
+          <div className="section">
+            <div className="lesson-type">
+              <button
+                className={lessonType === "1-hour" ? "active" : ""}
+                onClick={() => setLessonType("1-hour")}
+              >
+                1-Hour Lesson
+              </button>
+              <button
+                className={lessonType === "2-hour" ? "active" : ""}
+                onClick={() => setLessonType("2-hour")}
+              >
+                2-Hour Lesson
+              </button>
+            </div>
 
-          {/* Dates */}
-          <div className="form-section">
-            <label>Available Dates</label>
-            <select>
-              <option>Wed, 8 Oct 2025</option>
-            </select>
-          </div>
+            <div className="row">
+              <select value={date} onChange={(e) => setDate(e.target.value)}>
+                <option value="">Select a day</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+              </select>
 
-          {/* Times */}
-          <div className="form-section">
-            <label>Available Times</label>
-            <select
-              value={selectedTime}
-              onChange={(e) => setSelectedTime(e.target.value)}
-            >
-              <option value="">Select a time</option>
-              <option value="09:00">09:00 AM</option>
-              <option value="10:00">10:00 AM</option>
-              <option value="11:00">11:00 AM</option>
-              <option value="12:00">12:00 PM</option>
-              <option value="13:00">01:00 PM</option>
-              <option value="14:00">02:00 PM</option>
-              <option value="15:00">03:00 PM</option>
-              <option value="16:00">04:00 PM</option>
-            </select>
-          </div>
+              <select value={time} onChange={(e) => setTime(e.target.value)}>
+                <option value="">Select a time</option>
+                <option value="10am">10:00 AM</option>
+                <option value="2pm">2:00 PM</option>
+              </select>
+            </div>
 
-          {/* Location */}
-          <div className="form-section">
-            <label>Lesson Pick Up Location</label>
-            <div className="location-box">
-              123 Placeholder Street, London, United Kingdom, NW1 6XE
+            <div className="location">
+              <input
+                type="text"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+              />
               <button className="edit-btn">Edit</button>
             </div>
+
             <button className="save-btn">Save</button>
           </div>
         </div>
 
-        {/* Right Side Summary */}
+        {/* Right Summary */}
         <div className="summary-card">
           <h3>Order Summary</h3>
 
-          <div className="summary-row">
+          <div className="summary-item">
             <span>20 hrs Booking Credit</span>
             <span>£800.00</span>
           </div>
-          <div className="summary-row discount">
-            <span>Credit Discount 10% OFF</span>
-            <span>-£80.00</span>
+
+          <div className="summary-item discount">
+            <span>
+              Credit Discount <span className="tag">10% OFF</span>
+            </span>
+            <span>- £80.00</span>
           </div>
-          <div className="summary-row fee">
+
+          <div className="summary-item">
             <span>Platform Processing Fee</span>
             <span>£14.40</span>
           </div>
-          <div className="summary-row total">
-            <span>Total Payment Due</span>
-            <span>£734.40</span>
+
+          <hr />
+
+          <div className="summary-total">
+            <strong>Total Payment Due</strong>
+            <strong>£734.40</strong>
           </div>
-          <p className="payment-alt">Or 4 payments of £183.60</p>
+
+          <p className="installments">Or 4 payments of £183.60</p>
 
           <button className="disabled-btn">Add Another Booking</button>
           <button className="disabled-btn">Continue</button>
-
-          {/* Payment Options */}
-          <div className="payment-options">
-            <button className="paypal-btn">Pay in 4 (PayPal)</button>
-            <button className="clearpay-btn">Clearpay</button>
-          </div>
-
-          {/* Features */}
-          <div className="features">
-            <div className="feature-item">
-              <h4>Purchase with peace of mind</h4>
-              <p>Our refund policy is hassle-free.</p>
-            </div>
-            <div className="feature-item">
-              <h4>Manage Your Lessons Online</h4>
-              <p>24/7 access. Manage your account. Switch your instructor at no cost.</p>
-            </div>
-            <div className="feature-item">
-              <h4>Secure Payments</h4>
-              <p>We use 100% secure payments to provide you with a simple and safe experience.</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,11 +1,14 @@
 import React from 'react';
 import './Topbar.css';
 const Topbar = () => {
+  const HandleSupport = () => {
+    window.location.href = "/support";
+  }
   return (
     <div className="topbar">
       {/* Left Links */}
       <div className="topbar-left">
-        <a href="https://www.ezlicence.co.uk/">Support</a>
+        <buttontop onClick={HandleSupport}>Support</buttontop>
         <a href="https://www.ezlicence.co.uk/">Blog</a>
         <a href="https://www.ezlicence.co.uk/">Instruct with EzLicence</a>
 
