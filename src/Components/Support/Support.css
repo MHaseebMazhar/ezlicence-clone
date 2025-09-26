@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f7f7f7;
+      background-color: rgba(255, 255, 255, 1)
 }
 
 .app {
@@ -112,17 +112,20 @@ ease-in-out;
   text-decoration: none;
   font-family: 'POPPINS', sans-serif;
 }
+.login-link1:hover {
+  text-decoration: underline;
+}
 /* Categories */
 .categories {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
  width: 60%;
-  margin: 60px auto;
+  margin: 60px auto 0px auto;
   padding: 0 20px;
 }
 
-.card {
+.card1 {
   
   border: 1px solid #000000;
   border-radius: 4px;
@@ -130,16 +133,16 @@ ease-in-out;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
-.card:hover {
+.card1:hover {
   background-color: #000000;
   
 }
 
-.card p {
+.card1 p {
   font-size: 15px;
   color: #212A37;
 }
-.card:hover p {
+.card1:hover p {
  color: rgb(197, 169, 8);
 }
 
@@ -160,7 +163,7 @@ ease-in-out;
 .articles-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(290px,1fr));
-  gap: 52px;
+  gap: 32px;
 }
 
 .articles a {
@@ -168,36 +171,40 @@ ease-in-out;
   padding: 10px 0;
   border-bottom: 1px solid #c0c0c0;
   color: #333;
-  text-decoration: none;
+text-decoration: none;
   font-size: 14px;
 }
 
 .articles a:hover {
-  color: purple;
+  color: #333;
+  text-decoration: underline;
 }
 
 /* Footer */
 .footer-support {
-  margin-top: auto;
   padding: 20px;
+  padding-top: 2%;
   border-top: 1px solid #ddd;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2%;
+  padding-left: 19%;
   color: #666;
   font-size: 14px;
+  
 }
 .support-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #222;
+  background-color: rgb(16, 24, 40) !important;
   color: white;
-  padding: 12px 18px;
+  padding: 12px 28px;
   border-radius: 30px;
   border: none;
   cursor: pointer;
   font-weight: bold;
+  font-size: 18px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -225,12 +232,12 @@ ease-in-out;
 
 .iframe-close {
   position: absolute;
-  top: -12px;
-  left: -12px;
+  top: 2px;
+  left: 2px;
   background: #ff4d4f;
   border: none;
   color: white;
-  padding: 6px 10px;
+  padding: 2px 5px;
   border-radius: 50%;
   cursor: pointer;
 }

@@ -43,7 +43,7 @@ const BookingForm = () => {
           ].map((item) => (
             <div
               key={item.step}
-              className={`progress-step ${item.step === 2 ? "active" : ""}`}
+              className={`progress-step ${item.step === 3 ? "active" : ""}`}
             >
               <div className="step-circle">{item.step}</div>
               <div className="step-label">{item.label}</div>

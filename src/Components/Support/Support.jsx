@@ -69,11 +69,11 @@ const [isOpen, setIsOpen] = useState(false);
 
   const CategoryCards = () => (
     <div className="categories">
-      <div className="card">
+      <div className="card1">
         <p>Learners</p>
         <p>Information & support for learner drivers</p>
       </div>
-      <div className="card">
+      <div className="card1">
         <p>Driving Instructors</p>
         <p>Information & support for driving instructors</p>
       </div>
@@ -100,7 +100,7 @@ const [isOpen, setIsOpen] = useState(false);
     </div>
   );
 
-   const Footer = () => (
+   const Footer1 = () => (
     <footer className="footer-support">
       <span>EzLicence UK</span>
 
@@ -110,6 +110,7 @@ const [isOpen, setIsOpen] = useState(false);
           className="support-button"
           onClick={() => setIsOpen(true)}
         >
+          
           Support
         </button>
       )}
@@ -128,6 +129,7 @@ const [isOpen, setIsOpen] = useState(false);
                       font-family: Arial, sans-serif;
                       margin: 0;
                       padding: 16px;
+                      background: #f3f3f3ff;
                     }
                     h2 {
                       font-size: 18px;
@@ -180,10 +182,11 @@ const [isOpen, setIsOpen] = useState(false);
     <div className="app">
       <Header />
       <main>
+           
         <CategoryCards />
         <PromotedArticles />
       </main>
-      <Footer />
+      <Footer1 />
     </div>
   );
 }
