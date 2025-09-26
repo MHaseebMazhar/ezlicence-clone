@@ -10,6 +10,12 @@ const Topbar = () => {
   const HandleIntructwithEzLicense = () => {
     window.location.href = "/instruct-with-ezlicence";
   }
+  const HandleLearnerLogin = () => {
+    window.location.href = "/ez-login";
+  }
+  const HandleInstructorLogin = () => {
+    window.location.href = "/instructor-login";
+  }
   return (
     <div className="topbar">
       {/* Left Links */}
@@ -22,8 +28,8 @@ const Topbar = () => {
 
       {/* Right Links */}
       <div className="topbar-right">
-        <a href="https://www.ezlicence.co.uk/">Learner Login</a>
-        <a href="https://www.ezlicence.co.uk/">Instructor Login</a>
+        <button className="buttontop1" onClick={HandleLearnerLogin}>Learner Login</button>
+        <button className="buttontop1" onClick={HandleInstructorLogin}>Instructor Login</button>
       </div>
 
     </div>

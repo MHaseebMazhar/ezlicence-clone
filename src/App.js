@@ -20,6 +20,8 @@ import InstructwithEzLicence from "./Components/InstructwithEzLicence/Instructwi
 import Flexibility from "./Components/Flexibility/Flexibility";
 import OnboardingSection from "./Components/OnboardingSection/OnboardingSection"; 
 import EzFaqSection from "./Components/EzFaqSection/EzFaqSection";
+import EzLogin from "./Components/EzLogin/EzLogin";
+import InstructorLogin from "./Components/InstructorLogin/InstructorLogin";
 function App() {
   return (
     <BrowserRouter>
@@ -53,6 +55,8 @@ function App() {
         <Route path="/flexibility" element={<Flexibility />} />
         <Route path="/onboarding" element={<OnboardingSection />} />
         <Route path="/ez-faq" element={<EzFaqSection />} />
+        <Route path="/ez-login" element={<EzLogin />} />
+        <Route path="/instructor-login" element={<InstructorLogin />} />
       </Routes>
     </BrowserRouter>
   );

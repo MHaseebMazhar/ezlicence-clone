@@ -1,0 +1,119 @@
+.il-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.il-left {
+  flex: 1;
+  background: #f5f6fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.il-logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.il-logo-ez {
+  color: #000;
+}
+.il-logo-licence {
+  color: #000;
+}
+
+.il-tagline {
+
+  font-size: 22px;
+  color: #666;
+}
+
+.il-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.il-box {
+  width: 350px;
+}
+
+.il-heading {
+  margin-bottom: 5px;
+}
+
+.il-register {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.il-link {
+  color: #f5a400;
+  text-decoration: none;
+}
+
+.il-label {
+  font-size: 14px;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.il-input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.il-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+}
+
+.il-icon {
+  margin-right: 8px;
+}
+
+.il-remember {
+  margin: 15px 0;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.il-checkbox {
+  margin-right: 5px;
+}
+
+.il-btn {
+  width: 100%;
+  background: #ffc107;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.il-btn:hover {
+  background: #e0a800;
+}
+
+.il-forgot {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.il-forgot .il-link {
+  font-size: 13px;
+  color: #444;
+}

@@ -1,0 +1,121 @@
+.ezlogin-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+
+/* Left section */
+.ezlogin-left {
+  flex: 1;
+  background-color: #e9ebef;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+.ezlogin-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+
+}
+.ezlogin-logo-img {
+  width: 300px;
+  height: 100px;
+
+}
+
+.ezlogin-logo-highlight {
+  color: #fbbc05; /* yellow */
+}
+
+.ezlogin-tagline {
+
+  font-size: 1.3rem;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+/* Right section */
+.ezlogin-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%  ;
+}
+
+.ezlogin-form {
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.ezlogin-title {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Inputs */
+.ezlogin-form input[type="email"],
+.ezlogin-form input[type="password"] {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.ezlogin-form input[type="email"]:focus,
+.ezlogin-form input[type="password"]:focus {
+  outline: none;
+  border-color: #fbbc05;
+  box-shadow: 0 0 4px rgba(251, 188, 5, 0.5);
+}
+
+/* Remember */
+.ezlogin-remember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.ezlogin-remember input {
+  margin-right: 8px;
+  accent-color: #fbbc05;
+}
+
+/* Button */
+.ezlogin-btn {
+  background-color: #fbbc05;
+  border: none;
+  padding: 22px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+
+.ezlogin-btn:hover {
+  background-color: #e0a904;
+}
+
+/* Forgot link */
+.ezlogin-forgot {
+  font-size: 0.85rem;
+  color: #444;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ezlogin-forgot:hover {
+  text-decoration: underline;
+}

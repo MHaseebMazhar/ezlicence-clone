@@ -55,7 +55,7 @@ export default function EzFaqSection() {
             >
               {item.question}
               <span className="ezfaq-icon">
-                {activeIndex === index ? "−" : "+"}
+                {activeIndex === index ? "▲" : "▼"}
               </span>
             </button>
             {activeIndex === index && (
