@@ -22,6 +22,9 @@ import OnboardingSection from "./Components/OnboardingSection/OnboardingSection"
 import EzFaqSection from "./Components/EzFaqSection/EzFaqSection";
 import EzLogin from "./Components/EzLogin/EzLogin";
 import InstructorLogin from "./Components/InstructorLogin/InstructorLogin";
+import DrivingPricingAndPackages from "./Components/DrivingPricingAndPackages/DrivingPricingAndPackages";
+import GiftVoucherSection from "./Components/GiftVoucherSection/GiftVoucherSection";  
+import DrivingLessonsSection from "./Components/DrivingLessonsSection/DrivingLessonsSection";
 function App() {
   return (
     <BrowserRouter>
@@ -57,6 +60,9 @@ function App() {
         <Route path="/ez-faq" element={<EzFaqSection />} />
         <Route path="/ez-login" element={<EzLogin />} />
         <Route path="/instructor-login" element={<InstructorLogin />} />
+        <Route path="/driving-pricing-and-packages" element={<DrivingPricingAndPackages />} />
+        <Route path="/gift-voucher" element={<GiftVoucherSection />} />
+        <Route path="/driving-lessons-section" element={<DrivingLessonsSection />} />
       </Routes>
     </BrowserRouter>
   );

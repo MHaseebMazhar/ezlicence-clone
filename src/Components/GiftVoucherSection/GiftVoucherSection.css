@@ -1,0 +1,80 @@
+/* Container */
+.gv-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+  background: #f7f9fc;
+  width: 100%;
+  margin: auto;
+  gap: 40px;
+}
+
+/* Cards */
+.gv-cards {
+  display: flex;
+ justify-content: center;
+  gap: 15px;
+}
+
+
+
+
+/* Content */
+
+
+.gv-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Steps */
+.gv-steps {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.gv-step {
+  max-width: 220px;
+}
+
+.gv-icon {
+  font-size: 2rem;
+  color: black; /* black & white icons */
+  margin-bottom: 8px;
+}
+
+/* Button */
+.gv-btn {
+  background: #ffb900;
+  color: #333;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.gv-btn:hover {
+  background: #ffd24c;
+}
+
+.gv-arrow {
+  margin-left: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gv-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gv-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+}

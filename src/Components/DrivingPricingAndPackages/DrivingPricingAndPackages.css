@@ -1,0 +1,254 @@
+:root {
+  --dpp-dark-blue: #1a202c;
+  --dpp-text-white: #ffffff;
+  --dpp-accent-green: #48bb78;
+  --dpp-accent-yellow: #f6e05e;
+  --dpp-light-gray: #e2e8f0;
+}
+
+/* Container */
+.dpp-container {
+  background-color: var(--dpp-dark-blue);
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' ... %3C/svg%3E");
+  padding: 50px 20px 80px;
+  color: var(--dpp-text-white);
+  text-align: center;
+}
+
+.dpp-headerTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Check Block */
+.dpp-checkBlock {
+  background-color: var(--dpp-text-white);
+  border-radius: 8px;
+  padding: 30px;
+  margin: 0 auto 50px;
+  max-width: 900px;
+  text-align: left;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),
+              0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.dpp-checkPrompt {
+  display: flex;
+  align-items: center;
+  color: var(--dpp-dark-blue);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.dpp-searchIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  color: #a0aec0;
+}
+
+.dpp-inputGroup {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.dpp-typeButton {
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background-color: #f7fafc;
+  color: var(--dpp-dark-blue);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.dpp-typeButton:hover {
+  background-color: #edf2f7;
+}
+
+.dpp-typeButtonActive {
+  background-color: var(--dpp-accent-green);
+  color: var(--dpp-text-white);
+  border-color: var(--dpp-accent-green);
+  font-weight: 700;
+}
+
+.dpp-checkmark {
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.dpp-postcodeInput {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.dpp-postcodeInput::placeholder {
+  color: #a0aec0;
+}
+
+.dpp-searchButton {
+  padding: 10px 25px;
+  background-color: var(--dpp-dark-blue);
+  color: var(--dpp-text-white);
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dpp-searchButton:hover {
+  background-color: #2d3748;
+}
+
+/* Layout */
+.dpp-contentLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.dpp-leftColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 300px;
+}
+
+.dpp-rightColumn {
+  flex: 1;
+  text-align: left;
+}
+
+/* Car Mockup */
+.dpp-carMockup {
+  width: 100%;
+  max-width: 450px;
+  height: 250px;
+  position: relative;
+}
+
+.dpp-carBody {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(to right, #f6e05e 50%, var(--dpp-text-white) 50%);
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dpp-logo {
+  background-color: var(--dpp-dark-blue);
+  color: var(--dpp-text-white);
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 20px;
+}
+
+/* Features */
+.dpp-featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.dpp-featureList li {
+  display: flex;
+  align-items: center;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.dpp-featureList .dpp-checkmark {
+  color: var(--dpp-accent-green);
+  font-size: 1.5rem;
+  margin-right: 10px;
+  line-height: 1;
+}
+
+/* Review */
+.dpp-reviewBlock {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.dpp-googleIcon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--dpp-text-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4285f4;
+  border: 1px solid var(--dpp-light-gray);
+  margin-right: 15px;
+}
+
+.dpp-ratingInfo p {
+  margin: 0 0 5px 0;
+  font-size: 1rem;
+}
+
+.dpp-starRating {
+  color: var(--dpp-accent-yellow);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .dpp-contentLayout {
+    flex-direction: column;
+    text-align: center;
+  }
+  .dpp-leftColumn, .dpp-rightColumn {
+    max-width: 100%;
+    text-align: center;
+  }
+  .dpp-featureList {
+    text-align: left;
+    display: inline-block;
+  }
+  .dpp-reviewBlock {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .dpp-inputGroup {
+    flex-wrap: wrap;
+  }
+  .dpp-typeButton, .dpp-searchButton {
+    flex-grow: 1;
+  }
+  .dpp-postcodeInput {
+    order: -1;
+    width: 100%;
+    flex-basis: 100%;
+  }
+}

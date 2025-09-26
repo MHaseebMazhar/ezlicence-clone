@@ -1,47 +1,54 @@
- .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 3px 32px;
-            background: white;
-            border-bottom: 1px solid #eee;
-            font-family: 'Poppins', sans-serif;
-          }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 32px;
+  background: white;
+  border-bottom: 1px solid #eee;
+  font-family: 'Poppins', sans-serif;
+}
 
-          .left-section {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-          }
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
 
-          .logo img {
-             margin-top: 10%;  
-            height: 45px;
-          }
+.logo img {
+  margin-top: 10%;
+  height: 45px;
+}
 
-          .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 17px;
-            margin: 0;
-            padding: 0;
-          }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 17px;
+  margin: 0;
+  padding: 0;
+}
 
-          .nav-links li {
-            cursor: pointer;
-            font-weight: 500;
-            font-size: 14px;
-          }
+.nav-links li {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+}
 
-          .contact-info {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 14px;
-            font-weight: 500;
-          }
+.contact-info {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
 
-          .contact-info img {
-            height: 16px;
-            width: 16px;
-          }
+.contact-info a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-info img {
+  height: 16px;
+  width: 16px;
+}

@@ -3,14 +3,16 @@ import "./HowItWorks.css";
 
 const HowItWorks = () => {
   return (
-    <div className="howitworks">
-      <h2>How EzLicence works</h2>
-      <p className="subtitle">Simple, Trusted & Flexible Booking System</p>
+    <div className="howitworks-section">
+      <h2 className="howitworks-title">How EzLicence works</h2>
+      <p className="howitworks-subtitle">
+        Simple, Trusted & Flexible Booking System
+      </p>
 
-      <div className="steps">
-        <div className="step">
-          <div className="icon">1</div>
-          <div className="content">
+      <div className="howitworks-steps">
+        <div className="howitworks-step">
+          <div className="howitworks-icon">1</div>
+          <div className="howitworks-content">
             <h3>Browse Our Trusted Driving Instructors</h3>
             <p>
               Choose from a wide variety of instructors in your area. Check
@@ -19,9 +21,9 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        <div className="step">
-          <div className="icon">2</div>
-          <div className="content">
+        <div className="howitworks-step">
+          <div className="howitworks-icon">2</div>
+          <div className="howitworks-content">
             <h3>Book Lessons In Under 5 Mins</h3>
             <p>
               Book online with instant confirmation. Easily manage your lesson
@@ -30,9 +32,9 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        <div className="step">
-          <div className="icon">3</div>
-          <div className="content">
+        <div className="howitworks-step">
+          <div className="howitworks-icon">3</div>
+          <div className="howitworks-content">
             <h3>Get Your Licence</h3>
             <p>
               Your instructor picks you up from your chosen address and you're
@@ -42,9 +44,11 @@ const HowItWorks = () => {
         </div>
       </div>
 
-      <button className="cta">Start learning to drive now ➜</button>
+      <button className="howitworks-cta">
+        Start learning to drive now ➜
+      </button>
     </div>
   );
 };
 
-export default HowItWorks; 
+export default HowItWorks;
