@@ -1,0 +1,103 @@
+/* Main container with background image + fallback color */
+.onboarding-container {
+  background-color: #1c2128; /* fallback dark color */
+ background-size: cover;     /* covers full area */
+  background-position: center; /* center aligned */
+  background-repeat: no-repeat; /* prevent tiling */
+  
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+}
+
+/* If you want repeating pattern instead of full cover: 
+.onboarding-container {
+  background-image: url("/images/pattern-small.png");
+  background-repeat: repeat;
+  background-size: auto;
+} 
+*/
+
+.onboarding-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  background: rgba(28, 33, 40, 0.8); /* semi-transparent overlay for readability */
+  padding: 40px;
+  border-radius: 8px;
+}
+
+/* Grid layout */
+.onboarding-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+@media (max-width: 768px) {
+  .onboarding-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* LEFT SIDE */
+.onboarding-left {
+  margin-bottom: 20px;
+}
+
+.onboarding-title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.onboarding-subtitle {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+}
+
+/* RIGHT SIDE */
+.onboarding-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.onboarding-heading {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.onboarding-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.onboarding-list-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.onboarding-check-icon {
+  color: #4caf50; /* green */
+  margin-right: 12px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.onboarding-list-item p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  line-height: 1.5;
+}

@@ -17,6 +17,9 @@ import BookingForm from "./Components/BookingForm/BookingForm";
 import Support from "./Components/Support/Support";
 import Blog from "./Components/Blog/Blog";
 import InstructwithEzLicence from "./Components/InstructwithEzLicence/InstructwithEzLicence";
+import Flexibility from "./Components/Flexibility/Flexibility";
+import OnboardingSection from "./Components/OnboardingSection/OnboardingSection"; 
+import EzFaqSection from "./Components/EzFaqSection/EzFaqSection";
 function App() {
   return (
     <BrowserRouter>
@@ -47,6 +50,9 @@ function App() {
         <Route path="/support" element={<Support />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/instruct-with-ezlicence" element={<InstructwithEzLicence />} />
+        <Route path="/flexibility" element={<Flexibility />} />
+        <Route path="/onboarding" element={<OnboardingSection />} />
+        <Route path="/ez-faq" element={<EzFaqSection />} />
       </Routes>
     </BrowserRouter>
   );

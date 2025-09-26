@@ -1,0 +1,72 @@
+.instruct-container1 {
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero-section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f7f7f7;
+  gap: 20px;
+}
+
+.hero-text1 {
+  flex: 1;
+  max-width: 400px;
+  text-align: left;
+  padding-right: 40px;
+}
+
+.hero-title1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffc107;
+  margin-bottom: 20px;
+}
+
+.hero-buttons1 {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-signup1 {
+  background-color: #ffc107;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-demo1 {
+  background-color: #343a40;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* Right Image Section */
+.hero-image1 {
+  flex: 1;
+  max-width: 400px;
+}
+
+.image-placeholder1 {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: lightgray;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Divider */
+.divider1 {
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+}

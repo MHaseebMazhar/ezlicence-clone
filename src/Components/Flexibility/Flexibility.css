@@ -1,0 +1,105 @@
+.flexibility-main {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+  
+  text-align: center;
+}
+
+.flexibility-header {
+  margin-bottom: 40px;
+}
+
+.flexibility-header-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.flexibility-header-subtitle {
+  font-size: 16px;
+  color: #6c757d;
+}
+
+/* Grid Layout */
+.flexibility-grid {
+
+  margin-bottom: 40px;
+  
+  width: 100%;
+}
+
+.flexibility-icon {
+  height: 10%;   
+  border-radius: 4px;
+  overflow: hidden;
+  width: 70% ;
+}
+
+
+.flexibility-yellow {
+  background: linear-gradient(to right, #ffc107, #ffe08a);
+}
+
+.flexibility-blue {
+  background: linear-gradient(to right, #45b3e0, #a0d8f0);
+}
+
+.flexibility-pink {
+  background: linear-gradient(to right, #e83e8c, #f5a9c9);
+}
+
+.flexibility-text {
+  padding-top: 20px;
+}
+
+.flexibility-text-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.flexibility-text-desc {
+  font-size: 14px;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.flexibility-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.flexibility-btn {
+  padding: 10px 25px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.flexibility-btn.primary {
+  background-color: transparent;
+  border: 2px solid #343a40;
+  color: #343a40;
+}
+
+.flexibility-btn.primary:hover {
+  background-color: #e9ecef;
+}
+
+.flexibility-btn.secondary {
+  background-color: #343a40;
+  border: 2px solid #343a40;
+  color: white;
+}
+
+.flexibility-btn.secondary:hover {
+  background-color: #23272b;
+  border-color: #23272b;
+}

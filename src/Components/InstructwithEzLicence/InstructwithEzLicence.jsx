@@ -1,43 +1,46 @@
 import React from "react";
-import "./InstructwithEzLicence.css"; // import simple CSS
+import "./InstructwithEzLicence.css"; 
 import Topbar from "../Topbar/Topbar";
 import Navbar from "../Navbar/Navbar";
-import EzLicenceAdvantage from "../EzLicenceAdvantage/EzLicenceAdvantage";
+import Flexibility from "../Flexibility/Flexibility";
+import OnboardingSection from "../OnboardingSection/OnboardingSection";
+import EzFaqSection from "../EzFaqSection/EzFaqSection";
 import Footer from "../Footer/Footer";
-const bottomFaqs = [
-  {
-    id: 1,
-    title: "How do I find private driving instructors near me?",
-    content:
-      "Booking driving lessons through EzLicence is a quick and hassle free process that gives you all the choice and control. Why deal with traditional Driving Schools over the phone or by email when you can manage your driving instructor choice & book driving lessons yourself anywhere, and at any time through our secure online platform?",
-  },
-  {
-    id: 2,
-    title: "EzLicence: Driving Lessons, Your Way.",
-    content:
-      "Booking driving lessons through EzLicence is a quick and hassle free process that gives you all the choice and control. Why deal with traditional Driving Schools over the phone or by email when you can manage your driving instructor choice & book driving lessons yourself anywhere, and at any time through our secure online platform?",
-  },
-  {
-    id: 3,
-    title: "Why We’re a Leading Learner Driver Platform in the UK",
-    content:
-      "Booking driving lessons through EzLicence is a quick and hassle free process that gives you all the choice and control. Why deal with traditional Driving Schools over the phone or by email when you can manage your driving instructor choice & book driving lessons yourself anywhere, and at any time through our secure online platform?",
-  },
-  {
-    id: 4,
-    title: "Driving Instructors & Driving Schools You Can Rely On",
-    content:
-      "Booking driving lessons through EzLicence is a quick and hassle free process that gives you all the choice and control. Why deal with traditional Driving Schools over the phone or by email when you can manage your driving instructor choice & book driving lessons yourself anywhere, and at any time through our secure online platform?",
-  },
-];
+
 const InstructwithEzLicence = () => {
   return (
-    <div className="instruct-container">
+    <div className="instruct-container1">
       <Topbar />
       <Navbar />
-      <EzLicenceAdvantage />
-      <Footer />
+
+      {/* Hero Section */}
+      <div className="hero-section1">
+        {/* Left Text Section */}
+        <div className="hero-text1">
+          <div className="hero-title1">
+            Get Bookings With <br /> EzLicence
+          </div>
+
+          <div className="hero-buttons1">
+            <button className="btn-signup1">Sign up now</button>
+            <button className="btn-demo1">Book a demo</button>
+          </div>
+        </div>
+
+        {/* Right Image Section */}
+        <div className="hero-image1">
+          <div className="image-placeholder1">
+            <img src="/page-instruct-woman-taking-her-driver-s-license-test-vehicle-825e40779c216c22ca79dd340f3d9aacb5e71797eee24a4ac339632a255eeb94.jpg" alt="Instruct with EzLicence" style={{ width: '100%', height: '100%' }} />
+          </div>
+        </div>
       </div>
+
+      <div className="divider1"></div>
+      <Flexibility />
+      <OnboardingSection />
+      <EzFaqSection />
+      <Footer />
+    </div>
   );
 };
 
