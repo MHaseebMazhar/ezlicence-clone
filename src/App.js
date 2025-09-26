@@ -25,6 +25,8 @@ import InstructorLogin from "./Components/InstructorLogin/InstructorLogin";
 import DrivingPricingAndPackages from "./Components/DrivingPricingAndPackages/DrivingPricingAndPackages";
 import GiftVoucherSection from "./Components/GiftVoucherSection/GiftVoucherSection";  
 import DrivingLessonsSection from "./Components/DrivingLessonsSection/DrivingLessonsSection";
+import EzLicenceAdvantageSection from "./Components/EzLicenceAdvantageSection/EzLicenceAdvantageSection";
+import GiftVouchers from "./Components/GiftVouchers/GiftVouchers";
 function App() {
   return (
     <BrowserRouter>
@@ -63,6 +65,8 @@ function App() {
         <Route path="/driving-pricing-and-packages" element={<DrivingPricingAndPackages />} />
         <Route path="/gift-voucher" element={<GiftVoucherSection />} />
         <Route path="/driving-lessons-section" element={<DrivingLessonsSection />} />
+        <Route path="/ez-licence-advantage" element={<EzLicenceAdvantageSection />} />
+        <Route path="/gift-vouchers" element={<GiftVouchers />} />
       </Routes>
     </BrowserRouter>
   );

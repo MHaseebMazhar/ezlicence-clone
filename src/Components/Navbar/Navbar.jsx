@@ -4,6 +4,9 @@ import "./Navbar.css";
 const DrivingPricingAndPackages = () => {
   window.location.href = "/driving-pricing-and-packages";
 }
+const HandleGiftVouchers = () => {
+  window.location.href = "/gift-vouchers";
+}
 const Navbar = () => {
   return (
     <>
@@ -18,7 +21,7 @@ const Navbar = () => {
           <ul className="nav-links">
             <li>Driving Lessons</li>
             <li>Test Packages</li>
-            <li>Gift Vouchers</li>
+            <li onClick={HandleGiftVouchers}>Gift Vouchers</li>
             <li onClick={DrivingPricingAndPackages}>Pricing</li>
           </ul>
         </div>

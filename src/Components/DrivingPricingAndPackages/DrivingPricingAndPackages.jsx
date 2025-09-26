@@ -8,6 +8,7 @@ import TestimonialSlider from "../TestimonialSlider/TestimonialSlider";
 import GiftVoucherSection from "../GiftVoucherSection/GiftVoucherSection";
 import DrivingLessonsSection from "../DrivingLessonsSection/DrivingLessonsSection";
 import WhyChoose from "../WhyChoose/WhyChoose";
+import EzLicenceAdvantageSection from "../EzLicenceAdvantageSection/EzLicenceAdvantageSection";
 import Footer from "../Footer/Footer";
 const CarImage = () => (
   <div className="dpp-carMockup">
@@ -124,6 +125,7 @@ const DrivingPricingAndPackages = () => {
     <GiftVoucherSection />
     <DrivingLessonsSection />
     <WhyChoose />
+    <EzLicenceAdvantageSection />
     <Footer />
     </>
   );

@@ -1,0 +1,81 @@
+.advantage-section {
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+}
+
+.advantage-section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.advantage-accordion {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.advantage-item {
+
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd ;
+  overflow: hidden;
+}
+
+.advantage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.advantage-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.advantage-icon {
+  font-size: 18px;
+}
+
+.advantage-title {
+  color: #1F2A37 !important;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.advantage-arrow {
+  transition: transform 0.3s;
+}
+
+.advantage-arrow.open {
+  transform: rotate(180deg);
+}
+
+.advantage-content-wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.advantage-content {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* FAQ specific */
+.faq-item .advantage-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.faq-footer {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #222;
+}
