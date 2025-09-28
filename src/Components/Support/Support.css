@@ -111,7 +111,11 @@ ease-in-out;
   color: #000000;
   text-decoration: none;
   font-family: 'POPPINS', sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
+
 .login-link1:hover {
   text-decoration: underline;
 }

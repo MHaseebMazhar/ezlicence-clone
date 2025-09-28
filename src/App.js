@@ -27,12 +27,13 @@ import GiftVoucherSection from "./Components/GiftVoucherSection/GiftVoucherSecti
 import DrivingLessonsSection from "./Components/DrivingLessonsSection/DrivingLessonsSection";
 import EzLicenceAdvantageSection from "./Components/EzLicenceAdvantageSection/EzLicenceAdvantageSection";
 import GiftVouchers from "./Components/GiftVouchers/GiftVouchers";
+import SubmitRequest from "./Components/SubmitRequest/SubmitRequest";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route
-          path="/"
+          path="/Home"
           element={
             <>
               <Topbar />
@@ -67,6 +68,7 @@ function App() {
         <Route path="/driving-lessons-section" element={<DrivingLessonsSection />} />
         <Route path="/ez-licence-advantage" element={<EzLicenceAdvantageSection />} />
         <Route path="/gift-vouchers" element={<GiftVouchers />} />
+        <Route path="/submit-request" element={<SubmitRequest />} />
       </Routes>
     </BrowserRouter>
   );

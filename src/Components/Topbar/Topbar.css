@@ -22,23 +22,19 @@
           background: none;
           border: none;
           font-size: 12px;
+          cursor: pointer;
           
         }
         .buttontop1:hover {
           text-decoration: underline  ;
           
         }
-        .buttontop1:active {
-            color: #ffc600; /* Yellow when clicked */
-        }
+        
         .topbar a:hover {
           text-decoration: underline;
         }
 
-        .topbar a:active {
-            color: #ffc600; /* Yellow when clicked */
-        }
-        
+      
         .topbar-left {
             margin-right: auto; /* Pushes the left links to the left */
         }

@@ -21,12 +21,12 @@ const [isOpen, setIsOpen] = useState(false);
         </div>
         <div className="header-right1">
        
-          <a
-            href="https://www.ezlicence.co.uk/learner/purchase-step/booking_credit"
+          <button
+             onClick={HandleSubmitRequest}
             className="login-link1"
           >
             Contact Us
-          </a>
+          </button>
         </div>
       </header>
    <div
@@ -176,7 +176,9 @@ const [isOpen, setIsOpen] = useState(false);
       )}
     </footer>
   );
-
+  const HandleSubmitRequest = () => {
+    window.location.href = "/submit-request";
+  }
 
   return (
     <div className="app">

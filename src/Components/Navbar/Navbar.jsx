@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 
 const DrivingPricingAndPackages = () => {
   window.location.href = "/driving-pricing-and-packages";
-}
+};
 const HandleGiftVouchers = () => {
   window.location.href = "/gift-vouchers";
-}
+};
+
 const Navbar = () => {
+  const [showDropdown, setShowDropdown] = useState(false);
+
+ 
   return (
     <>
       <nav className="navbar">
@@ -19,7 +23,23 @@ const Navbar = () => {
             />
           </div>
           <ul className="nav-links">
-            <li>Driving Lessons</li>
+            <li
+              className="dropdown"
+              onMouseEnter={() => setShowDropdown(true)}
+              onMouseLeave={() => setShowDropdown(false)}
+            >
+              Driving Lessons
+              {showDropdown && (
+                <ul className="dropdown-menu">
+                  <li>London Driving Lessons</li>
+                  <li>Wembley Driving Lessons</li>
+                  <li>Bristol Driving Lessons</li>
+                  <li>Oxford Driving Lessons</li>
+                  <li>Sheffield Driving Lessons</li>
+                  <li>Nottingham Driving Lessons</li>
+                </ul>
+              )}
+            </li>
             <li>Test Packages</li>
             <li onClick={HandleGiftVouchers}>Gift Vouchers</li>
             <li onClick={DrivingPricingAndPackages}>Pricing</li>
