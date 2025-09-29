@@ -16,7 +16,7 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div className="left-section">
-          <div className="logo">
+          <div className="logo" onClick={() => (window.location.href = "/")}>
             <img
               src="/logo-ezlicence-simple-coloured-4f13463a55c628f757204c7ee1e6efb980c37ea9070beac8b9e5166fda60538f.png"
               alt="Logo"
@@ -31,7 +31,7 @@ const Navbar = () => {
               Driving Lessons
               {showDropdown && (
                 <ul className="dropdown-menu">
-                  <li>London Driving Lessons</li>
+                  <li onClick={() => (window.location.href = "/driving-lessons")}>London Driving Lessons</li>
                   <li>Wembley Driving Lessons</li>
                   <li>Bristol Driving Lessons</li>
                   <li>Oxford Driving Lessons</li>
@@ -40,7 +40,7 @@ const Navbar = () => {
                 </ul>
               )}
             </li>
-            <li>Test Packages</li>
+            <li onClick={()=>(window.location.href = "/test-packages")}>Test Packages</li>
             <li onClick={HandleGiftVouchers}>Gift Vouchers</li>
             <li onClick={DrivingPricingAndPackages}>Pricing</li>
           </ul>

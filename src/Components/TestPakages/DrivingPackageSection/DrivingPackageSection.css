@@ -1,0 +1,312 @@
+.dps-container {
+  width: 100%;
+  padding: 60px 0px;
+  background-color: #f9f9f9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+}
+
+.dps-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dps-top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.dps-left-content {
+  flex: 1;
+  max-width: 1000px;
+  min-width: 280px;
+  
+}
+
+.dps-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.dps-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.dps-right-image {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.dps-checklist-icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.dps-checklist-paper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 140px;
+  height: 180px;
+  background-color: #fff9e6;
+  border: 3px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dps-checklist-item {
+  width: 80%;
+  height: 30px;
+  background-color: white;
+  border: 2px solid #1a1a1a;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.dps-checkmark {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #28a745;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dps-person-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.dps-person-head {
+  width: 60px;
+  height: 60px;
+  background-color: #f5e6d3;
+  border-radius: 50%;
+  border: 3px solid #1a1a1a;
+  position: relative;
+}
+
+.dps-person-eye-left,
+.dps-person-eye-right {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  top: 20px;
+}
+
+.dps-person-eye-left { left: 15px; }
+.dps-person-eye-right { right: 15px; }
+
+.dps-person-body {
+  width: 90px;
+  height: 80px;
+  background-color: white;
+  border: 3px solid #1a1a1a;
+  border-radius: 20px;
+  margin-top: -10px;
+  position: relative;
+}
+
+.dps-person-badge {
+  position: absolute;
+  width: 25px;
+  height: 20px;
+  background-color: #ffd700;
+  border: 2px solid #1a1a1a;
+  border-radius: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+}
+
+/* --- Bottom Section --- */
+
+.dps-bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.dps-car-illustration {
+  flex: 0 0 300px;
+  min-width: 280px;
+}
+
+.dps-car-icon {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.dps-car-body {
+  position: absolute;
+  width: 280px;
+  height: 140px;
+  background-color: white;
+  border: 4px solid #1a1a1a;
+  border-radius: 60px 60px 20px 20px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dps-car-windshield {
+  position: absolute;
+  width: 200px;
+  height: 70px;
+  background-color: #e6f3ff;
+  border: 3px solid #1a1a1a;
+  border-radius: 40px 40px 0 0;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dps-car-person-left,
+.dps-car-person-right {
+  position: absolute;
+  top: 25px;
+  z-index: 2;
+}
+
+.dps-car-person-left { left: 40px; }
+.dps-car-person-right { right: 40px; }
+
+.dps-car-person-head {
+  width: 45px;
+  height: 45px;
+  background-color: #f5e6d3;
+  border-radius: 50%;
+  border: 3px solid #1a1a1a;
+  position: relative;
+}
+
+.dps-car-person-eye-left,
+.dps-car-person-eye-right {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  top: 15px;
+}
+
+.dps-car-person-eye-left { left: 10px; }
+.dps-car-person-eye-right { right: 10px; }
+
+.dps-car-person-hair {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  background-color: #1a1a1a;
+  border-radius: 50% 50% 0 0;
+  top: -5px;
+  left: -3px;
+  z-index: 1;
+}
+
+.dps-car-steering {
+  position: absolute;
+  width: 40px;
+  height: 8px;
+  background-color: #666;
+  border-radius: 10px;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dps-car-mirror-left,
+.dps-car-mirror-right {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  top: 60px;
+}
+
+.dps-car-mirror-left { left: -15px; }
+.dps-car-mirror-right { right: -15px; }
+
+.dps-car-light-left,
+.dps-car-light-right {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: #ffd700;
+  border-radius: 50%;
+  border: 3px solid #1a1a1a;
+  bottom: 15px;
+}
+
+.dps-car-light-left { left: 20px; }
+.dps-car-light-right { right: 20px; }
+
+.dps-car-grill {
+  position: absolute;
+  width: 120px;
+  height: 12px;
+  background-color: #666;
+  border: 2px solid #1a1a1a;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.dps-car-grill-line1,
+.dps-car-grill-line2 {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #1a1a1a;
+}
+
+.dps-car-grill-line1 { top: 3px; }
+.dps-car-grill-line2 { bottom: 3px; }
+
+/* Info Box */
+.dps-info-box {
+  flex: 1;
+  max-width: 650px;
+  min-width: 280px;
+}
+
+.dps-subheading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+}
+
+.dps-info-text,
+.dps-cta-text {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}

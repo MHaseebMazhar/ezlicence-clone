@@ -1,0 +1,134 @@
+:root {
+  --dip-primary: #ffc107;
+  --dip-dark: #222;
+  --dip-gray: #555;
+  --dip-light: #fafafa;
+  --dip-radius: 10px;
+}
+
+/* Main container */
+.dip-container {
+  width: 60%  ;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+
+
+/* Search Section */
+.dip-search-title {
+     font-size: 34px;
+    line-height: 44px;
+    font-weight: 600;
+    text-align: center;
+  color: var(--dip-dark);
+  margin-bottom: 8px;
+}
+
+.dip-search-subtitle {
+     font-size: 16px;
+    font-weight: 300;
+    color: #101828;
+    text-align: center;
+  line-height: 1.6;
+    margin-bottom: 2.9375rem;
+    text-rendering: optimizeLegibility;
+}
+
+.dip-search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: var(--dip-radius);
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Transmission toggle */
+.dip-toggle {
+  display: flex;
+  border-right: 1px solid #ddd;
+}
+
+.dip-toggle-btn {
+  padding: 0 25px;
+  height: 50px;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--dip-gray);
+  transition: all 0.2s ease;
+}
+
+.dip-toggle-btn.active {
+  background: var(--dip-light);
+  font-weight: 600;
+  color: var(--dip-dark);
+}
+
+/* Input */
+.dip-input {
+  flex: 1;
+  height: 50px;
+  border: none;
+  padding: 0 15px;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Search Button */
+.dip-search-btn {
+  background-color: #FFBC00;
+    border-color: #e6a900;
+ color: #1F2A37;
+  height: 44px;
+  font-size: 1rem;
+  font-weight: 600;
+      padding-left: 0.3125rem !important;
+    padding-right: 0.3125rem !important;
+  cursor: pointer;
+  width: 20%;
+      margin: 0px !important;
+          border: 1px solid #2274A5;
+    vertical-align: middle;
+    border-radius: 8px !important;
+    font-weight: 500;
+        font-family: "Poppins", sans-serif;
+}
+
+.dip-search-btn:hover {
+  background: #e0ac00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dip-search-box {
+    flex-direction: column;
+    gap: 10px;
+    border: none;
+  }
+
+  .dip-toggle {
+    border: 1px solid #ddd;
+    border-radius: var(--dip-radius);
+    overflow: hidden;
+  }
+
+  .dip-input {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: var(--dip-radius);
+  }
+
+  .dip-search-btn {
+    width: 100%;
+    border-radius: var(--dip-radius);
+    height: 50px;
+  }
+}

@@ -1,0 +1,136 @@
+/* Container */
+.dp-container {
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header Banner */
+.dp-header-banner {
+  color: white;
+ height: 250px;
+  text-align: center;
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dp-header-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.dp-header-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.8;
+}
+
+/* Card */
+.dp-main {
+
+  position: relative;
+  z-index: 10;
+  padding: 0 20px;
+}
+
+.dp-card {
+ 
+  padding: 40px;
+
+ 
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dp-card-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #222;
+}
+
+.dp-card-tagline {
+  color: #666;
+  margin: 15px 0 25px;
+}
+
+.dp-card-description {
+  color: #444;
+  margin-bottom: 40px;
+}
+
+/* Layout */
+.dp-content-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .dp-content-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
+  }
+}
+
+/* Green P Icon */
+.dp-p-icon {
+  width: 120px;
+  height: 120px;
+ 
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  font-weight: 900;
+
+}
+.dp-p-icon img {
+  width: 180px;
+  height: 180px;
+}
+/* Feature List */
+.dp-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.dp-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #444;
+}
+
+.dp-feature-icon {
+  width: 24px;
+  height: 24px;
+  color: #22c55e;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.dp-bold {
+  font-weight: 600;
+  color: #222;
+}
+
+/* Footer Note */
+.dp-footer-note {
+
+  font-size: 1.1rem;
+     color: #475467 ;
+  
+ 
+ font-family: "Poppins", sans-serif;
+}
+

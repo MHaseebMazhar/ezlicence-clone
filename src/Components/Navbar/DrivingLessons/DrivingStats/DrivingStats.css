@@ -1,0 +1,48 @@
+.driving-stats {
+  background: #fff;
+  padding: 0px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 50px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px 0px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 22px;
+  font-weight: bold;
+  color: #222;
+}
+
+.stat-icon {
+  font-size: 28px;
+  color: #444;
+  margin-top: 10px;
+}
+
+.stat-text {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #666;
+}

@@ -1,0 +1,168 @@
+/* Container */
+.si-app-container {
+  font-family: 'Inter', sans-serif;
+  min-height: 10vh;
+  background: #fff;
+  padding: 40px 0 16px;
+}
+
+/* Header */
+.si-header {
+  max-width: 1000px;
+  margin: 0 auto 32px;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.si-title {
+font-weight: 600;
+    margin: 0px;
+    font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    line-height: 1.1;
+}
+
+.si-subtitle {
+  color: #555;
+  font-size: 1.125rem;
+}
+
+/* Search Section */
+.si-bg-section {
+  background-color: #f8f9fa;
+  padding: 48px 16px;
+}
+
+.si-search-box {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.si-search-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .si-search-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* Selector Group */
+.si-selector-group {
+  display: flex;
+  width: 100%;
+  max-width: 460px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.si-tab {
+  flex: 1;
+  padding: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.si-active {
+  background: #fff;
+  color: #222;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.si-inactive {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.si-inactive:hover {
+  background: #bfdbfe;
+}
+
+.si-tab-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.si-check-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+/* Postcode Input */
+.si-input-wrapper {
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.si-input {
+  width: 90%;
+  padding: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.si-input:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.3);
+}
+
+.si-error-input {
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 3px rgba(251,191,36,0.4);
+}
+
+/* Error Box */
+.si-error-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 6px;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.si-error-border {
+  border-color: #fbbf24;
+}
+
+.si-error-text {
+  color: #666;
+}
+
+.si-error-text-active {
+  color: #b45309;
+  font-weight: 600;
+}
+
+/* Search Button */
+.si-search-btn {
+  padding: 14px 82px;
+  background: #d1d5db;
+  color: #222;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.si-search-btn:hover {
+  background: #9ca3af;
+}

@@ -29,6 +29,15 @@ import EzLicenceAdvantageSection from "./Components/EzLicenceAdvantageSection/Ez
 import GiftVouchers from "./Components/GiftVouchers/GiftVouchers";
 import SubmitRequest from "./Components/SubmitRequest/SubmitRequest";
 import LearnersHelp from "./Components/LearnersHelp/LearnersHelp";
+import TestPakages from "./Components/TestPakages/TestPakages/TestPakages";
+import DrivingPackage from "./Components/TestPakages/DrivingPackage/DrivingPackage";
+import SearchInstructor from "./Components/TestPakages/SearchInstructor/SearchInstructor";
+import DrivingPackageSection from "./Components/TestPakages/DrivingPackageSection/DrivingPackageSection";
+import CheckPostcodePricing from "./Components/TestPakages/CheckPostcodePricing/CheckPostcodePricing";
+import DrivingLessons from "./Components/Navbar/DrivingLessons/DrivingLessons";
+import DrivingInstructorPage from "./Components/Navbar/DrivingLessons/DrivingInstructorPage/DrivingInstructorPage";
+import DrivingStats from "./Components/Navbar/DrivingLessons/DrivingStats/DrivingStats";
+import InstructorSlider from "./Components/Navbar/DrivingLessons/InstructorSlider/InstructorSlider";
 function App() {
   return (
     <BrowserRouter>
@@ -71,6 +80,15 @@ function App() {
         <Route path="/gift-vouchers" element={<GiftVouchers />} />
         <Route path="/submit-request" element={<SubmitRequest />} />
         <Route path="/learners-help" element={<LearnersHelp />} />
+        <Route path="/test-packages" element={<TestPakages />} />
+        <Route path="/driving-package/:packageId" element={<DrivingPackage />} />
+        <Route path="/search-instructor" element={<SearchInstructor />} />
+        <Route path="/driving-package-section" element={<DrivingPackageSection />} />
+        <Route path="/check-postcode-pricing" element={<CheckPostcodePricing />} />
+        <Route path="/driving-lessons" element={<DrivingLessons />} />
+        <Route path="/driving-instructor-page/:instructorId" element={<DrivingInstructorPage />} />
+        <Route path="/driving-stats" element={<DrivingStats />} />
+        <Route path="/instructor-slider" element={<InstructorSlider />} />
       </Routes>
     </BrowserRouter>
   );
