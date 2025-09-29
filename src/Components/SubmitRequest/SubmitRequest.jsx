@@ -4,7 +4,8 @@ import "./SubmitRequest.css";
 const SubmitRequest = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [searchValue, setSearchValue] = useState("");
-
+  const [showMessage, setShowMessage] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
   const options = [
     "-",
     "I am learning to drive",
@@ -17,8 +18,102 @@ const SubmitRequest = () => {
     window.location.href = "/submit-request";
   };
 
+  const handleFormSubmit = (e) => {
+    e.preventDefault(); // ✅ prevent default submit
+    setShowMessage(true);
+
+    // ✅ 2s baad page refresh
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
+  };
+  const HandleEzlicenseUK = () => {
+    window.location.href = "/support";
+  }
+    const Footer1 = () => (
+    <footer className="footer-support">
+      <span className="footer-support-handle" onClick={HandleEzlicenseUK}>EzLicence UK</span>
+
+      {/* Floating Support Button */}
+      {!isOpen && (
+        <button
+          className="support-button"
+          onClick={() => setIsOpen(true)}
+        >
+          
+          Support
+        </button>
+      )}
+
+      {/* Iframe Widget */}
+      {isOpen && (
+        <div className="iframe-container">
+          <iframe
+            title="Support Options"
+            id="webWidget"
+            srcDoc={`<!DOCTYPE html>
+              <html>
+                <head>
+                  <style>
+                    body {
+                      font-family: Arial, sans-serif;
+                      margin: 0;
+                      padding: 16px;
+                      background: #f3f3f3ff;
+                    }
+                    h2 {
+                      font-size: 18px;
+                      margin-bottom: 12px;
+                      color: #333;
+                    }
+                    ul {
+                      list-style: none;
+                      padding: 0;
+                    }
+                    li {
+                      margin-bottom: 10px;
+                    }
+                    button {
+                      width: 100%;
+                      padding: 12px;
+                      border: 1px solid #ccc;
+                      border-radius: 6px;
+                      background: #f9f9f9;
+                      cursor: pointer;
+                      transition: all 0.2s ease-in-out;
+                    }
+                    button:hover {
+                      background: #222;
+                      color: white;
+                    }
+                  </style>
+                </head>
+                <body>
+                  <h2>Please select your issue</h2>
+                  <ul>
+                    <li><button>I am learning to drive</button></li>
+                    <li><button>I am a Driving Instructor</button></li>
+                    <li><button>I am a Driving Instructor interested in joining EzLicence</button></li>
+                    <li><button>I have a Media / PR enquiry</button></li>
+                  </ul>
+                </body>
+              </html>`}
+          />
+          <button className="iframe-close" onClick={() => setIsOpen(false)}>
+            ✕
+          </button>
+        </div>
+      )}
+    </footer>
+  );
+
   return (
     <>
+      {/* ✅ Success message top right */}
+      {showMessage && (
+        <div className="success-message">Successfully Submitted</div>
+      )}
+
       <header className="header-support">
         <div className="logo-container3">
           <img
@@ -37,7 +132,6 @@ const SubmitRequest = () => {
       <div className="submit-request-container">
         {/* 🔍 Search input */}
         <div className="submit-request-search">
-          
           <input
             type="text"
             className="search-input"
@@ -47,8 +141,7 @@ const SubmitRequest = () => {
           />
         </div>
         <nav className="submit-request-breadcrumb">
-          EzLicence UK &gt; Submit a request
-
+          <button className="login-link1"onClick={HandleEzlicenseUK}>EzLicence UK</button>  &gt; Submit a request
         </nav>
 
         <h1 className="submit-request-title">Submit a request</h1>
@@ -69,7 +162,6 @@ const SubmitRequest = () => {
           ))}
         </select>
 
-
         {/* Conditional Form */}
         {[
           "I am learning to drive",
@@ -77,12 +169,13 @@ const SubmitRequest = () => {
           "I am a Driving Instructor interested in joining EzLicence",
           "I have a Media / PR enquiry",
         ].includes(selectedOption) && (
-          <form className="submit-request-form">
+          <form className="submit-request-form" onSubmit={handleFormSubmit}>
             <label>Email address</label>
             <input
               type="email"
               className="form-input"
               placeholder="Your email address"
+              required
             />
 
             <label>First name</label>
@@ -90,6 +183,7 @@ const SubmitRequest = () => {
               type="text"
               className="form-input"
               placeholder="First name"
+              required
             />
 
             <label>Surname</label>
@@ -128,6 +222,7 @@ const SubmitRequest = () => {
               className="form-input textarea"
               rows="5"
               placeholder="Write your message here"
+              required
             ></textarea>
 
             <label>Attachments (optional)</label>
@@ -139,13 +234,9 @@ const SubmitRequest = () => {
           </form>
         )}
       </div>
+
       {/* ✅ Footer */}
-      <footer className="submit-request-footer">
-       
-        <div className="footer-links">
-          <a href="/Home">EzLicence UK</a>
-             </div>
-      </footer>
+      <Footer1 />
     </>
   );
 };

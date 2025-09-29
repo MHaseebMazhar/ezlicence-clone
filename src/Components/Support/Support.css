@@ -81,6 +81,7 @@ margin-left: 34%;
     border-radius: 30px;
     border-style: solid;
     border-width: 1px;
+    
     display: flex
 ;
     position: relative;
@@ -195,7 +196,16 @@ text-decoration: none;
   padding-left: 19%;
   color: #666;
   font-size: 14px;
-  
+
+}
+.footer-support-handle {
+  color: #666;
+  text-decoration: none;
+
+}
+.footer-support-handle:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 .support-button {
   position: fixed;

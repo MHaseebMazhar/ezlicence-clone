@@ -7,7 +7,13 @@ const [isOpen, setIsOpen] = useState(false);
   const handleSearchChange = (e) => {
     setSearchValue(e.target.value);
   };
+  const HandleEzlicenseUK = () => {
+    window.location.href = "/support";
+  }
 
+  const HandleFirst = () => {
+    window.location.href = "/learners-help";
+  }
   const Header = () => (
     <>
       {/* Header */}
@@ -69,7 +75,7 @@ const [isOpen, setIsOpen] = useState(false);
 
   const CategoryCards = () => (
     <div className="categories">
-      <div className="card1">
+      <div onClick={HandleFirst} className="card1">
         <p>Learners</p>
         <p>Information & support for learner drivers</p>
       </div>
@@ -102,7 +108,7 @@ const [isOpen, setIsOpen] = useState(false);
 
    const Footer1 = () => (
     <footer className="footer-support">
-      <span>EzLicence UK</span>
+      <span className="footer-support-handle" onClick={HandleEzlicenseUK}>EzLicence UK</span>
 
       {/* Floating Support Button */}
       {!isOpen && (
