@@ -1,0 +1,81 @@
+.ezl-container {
+  font-family: 'Inter', sans-serif;
+  min-height: 10vh;
+ 
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.ezl-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.ezl-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.ezl-header p {
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.ezl-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.ezl-step-item {
+  background-color: #fff;
+  max-width: 250px;
+  padding: 1rem;
+  margin: 0 1rem;
+
+}
+
+.ezl-step-icon-wrapper {
+  background-color: #fff3cd;
+  color: #f59e0b;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  display: inline-flex;
+}
+
+.ezl-icon-svg {
+  width: 40px;
+  height: 40px;
+}
+
+.ezl-step-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.ezl-step-desc {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.ezl-arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+}
+
+.ezl-arrow-svg {
+  width: 0px;
+  height: 40px;
+}

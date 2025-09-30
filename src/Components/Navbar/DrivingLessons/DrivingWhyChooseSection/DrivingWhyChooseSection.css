@@ -1,0 +1,78 @@
+.drivingwhy-container {
+ 
+  padding: 60px 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.drivingwhy-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.drivingwhy-header {
+  margin-bottom: 40px;
+}
+
+.drivingwhy-title {
+     font-size: 34px;
+    line-height: 44px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+
+  color: #333333;
+    font-family: "Poppins", sans-serif;
+   
+}
+
+.drivingwhy-subtitle {
+ font-size: 16px;
+    font-weight: 300;
+    color: #101828;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 24px;
+}
+
+.drivingwhy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.drivingwhy-card {
+ 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+
+.drivingwhy-card-title {
+font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+  color: #222222;
+}
+
+.drivingwhy-card-description {
+ font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+    color: #101828;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .drivingwhy-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+}

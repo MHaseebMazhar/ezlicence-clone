@@ -38,6 +38,9 @@ import DrivingLessons from "./Components/Navbar/DrivingLessons/DrivingLessons";
 import DrivingInstructorPage from "./Components/Navbar/DrivingLessons/DrivingInstructorPage/DrivingInstructorPage";
 import DrivingStats from "./Components/Navbar/DrivingLessons/DrivingStats/DrivingStats";
 import InstructorSlider from "./Components/Navbar/DrivingLessons/InstructorSlider/InstructorSlider";
+import EzLicenceProcess from "./Components/Navbar/DrivingLessons/EzLicenceProcess/EzLicenceProcess";
+import FeaturedLogos from "./Components/Navbar/DrivingLessons/FeaturedLogos/FeaturedLogos";
+import DrivingWhyChooseSection from "./Components/Navbar/DrivingLessons/DrivingWhyChooseSection/DrivingWhyChooseSection";
 function App() {
   return (
     <BrowserRouter>
@@ -89,6 +92,9 @@ function App() {
         <Route path="/driving-instructor-page/:instructorId" element={<DrivingInstructorPage />} />
         <Route path="/driving-stats" element={<DrivingStats />} />
         <Route path="/instructor-slider" element={<InstructorSlider />} />
+        <Route path="/ez-licence-process" element={<EzLicenceProcess />} />
+        <Route path="/featured-logos" element={<FeaturedLogos />} />
+        <Route path="/driving-why-choose-section" element={<DrivingWhyChooseSection />} />
       </Routes>
     </BrowserRouter>
   );

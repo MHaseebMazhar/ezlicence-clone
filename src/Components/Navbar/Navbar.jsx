@@ -10,8 +10,17 @@ const HandleGiftVouchers = () => {
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const HandleDrivingCity = (city) => {
+    // Store the selected city in sessionStorage so the next page can read it
+    try {
+      sessionStorage.setItem("selectedCity", city);
+    } catch (e) {
+      // ignore storage errors
+    }
+    // Navigate to driving lessons page without exposing the city in the URL
+    window.location.href = "/driving-lessons";
+  };
 
- 
   return (
     <>
       <nav className="navbar">
@@ -31,16 +40,30 @@ const Navbar = () => {
               Driving Lessons
               {showDropdown && (
                 <ul className="dropdown-menu">
-                  <li onClick={() => (window.location.href = "/driving-lessons")}>London Driving Lessons</li>
-                  <li>Wembley Driving Lessons</li>
-                  <li>Bristol Driving Lessons</li>
-                  <li>Oxford Driving Lessons</li>
-                  <li>Sheffield Driving Lessons</li>
-                  <li>Nottingham Driving Lessons</li>
+                  <li onClick={() => HandleDrivingCity("London")}>
+                    London Driving Lessons
+                  </li>
+                  <li onClick={() => HandleDrivingCity("Wembley")}>
+                    Wembley Driving Lessons
+                  </li>
+                  <li onClick={() => HandleDrivingCity("Bristol")}>
+                    Bristol Driving Lessons
+                  </li>
+                  <li onClick={() => HandleDrivingCity("Oxford")}>
+                    Oxford Driving Lessons
+                  </li>
+                  <li onClick={() => HandleDrivingCity("Sheffield")}>
+                    Sheffield Driving Lessons
+                  </li>
+                  <li onClick={() => HandleDrivingCity("Nottingham")}>
+                    Nottingham Driving Lessons
+                  </li>
                 </ul>
               )}
             </li>
-            <li onClick={()=>(window.location.href = "/test-packages")}>Test Packages</li>
+            <li onClick={() => (window.location.href = "/test-packages")}>
+              Test Packages
+            </li>
             <li onClick={HandleGiftVouchers}>Gift Vouchers</li>
             <li onClick={DrivingPricingAndPackages}>Pricing</li>
           </ul>

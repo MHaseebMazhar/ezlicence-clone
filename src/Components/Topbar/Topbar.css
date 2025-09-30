@@ -1,71 +1,65 @@
-        .topbar {
-          background-color: #182230; /* dark navy blue */
-          color: white;
-          display: flex;
-          justify-content: flex-end; /* Align to the right */
-          align-items: center;
-          padding: 12.5px 6px 12.5px 6px;
-          font-size: 12px;
-          font-family: 'Poppins', sans-serif;
-          white-space: nowrap; /* Prevent wrapping on small screens */
-          overflow-x: auto; /* Allow horizontal scrolling if necessary */
-        }
-        
-        .topbar a {
-          color: white;
-          text-decoration: none;
-          transition: color 0.2s;
-        }
-        .buttontop1{  color: white;
-          text-decoration: none;
-          transition: color 0.2s;
-          background: none;
-          border: none;
-          font-size: 12px;
-          cursor: pointer;
-          
-        }
-        .buttontop1:hover {
-          text-decoration: underline  ;
-          
-        }
-        
-        .topbar a:hover {
-          text-decoration: underline;
-        }
+.topbar {
+  background-color: #182230; /* dark navy blue */
+  color: white;
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  align-items: center;
+  padding: 12.5px 6px 12.5px 6px;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  white-space: nowrap; /* Prevent wrapping on small screens */
+  overflow-x: auto; /* Allow horizontal scrolling if necessary */
+}
 
-      
-        .topbar-left {
-            margin-right: auto; /* Pushes the left links to the left */
-        }
+.topbar a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
 
-        .topbar-left a,
-        .topbar-right a {
-            position: relative;
-            padding: 0 10px; /* Add padding for spacing */
-        }
-        
-        .topbar-left a:not(:last-child)::after,
-        .topbar-right a:not(:last-child)::after {
-          content: "|";
-          margin-left: 10px;
-          color: #999;
-        }
+/* Style the topbar buttons specifically */
+.buttontop1 {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0 10px; /* horizontal padding for spacing */
+  line-height: 1;
+}
 
-        .topbar-left a:first-child::after {
-            content: none;
-        }
-        
-        .topbar-left a:last-child::after {
-            content: none;
-        }
+.buttontop1:hover {
+  text-decoration: underline;
+}
 
+.topbar-left {
+  margin-right: auto; /* Pushes the left links to the left */
+  display: flex;
+  align-items: center;
+}
 
-        @media (max-width: 768px) {
-          .topbar {
-            justify-content: center; /* Center content on smaller screens */
-          }
-          .topbar-left, .topbar-right {
-            display: none; /* Hide for very small screens for better mobile experience */
-          }
-        }
+.topbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Add a subtle separator between buttons in each group */
+.topbar-left .buttontop1:not(:last-child)::after,
+.topbar-right .buttontop1:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px;
+  color: #999;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    justify-content: center; /* Center content on smaller screens */
+  }
+  .topbar-left,
+  .topbar-right {
+    display: none; /* Hide for very small screens for better mobile experience */
+  }
+}
