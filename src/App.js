@@ -46,6 +46,9 @@ import GiftVoucherCTA from "./Components/GiftVouchers/GiftVoucherCTA/GiftVoucher
 import GiftVoucherBanner from "./Components/GiftVouchers/GiftVoucherBanner/GiftVoucherBanner";
 import TrustSection from "./Components/Results/TrustSection/TrustSection";  
 import DriveSearchSection from "./Components/Results/DriveSearchSection/DriveSearchSection";
+import LearnerRegistrationPage from "./Components/BookingForm/LearnerRegistrationPage/LearnerRegistrationPage";
+import EzlPaymentPage from "./Components/BookingForm/EzlPaymentPage/EzlPaymentPage";
+import EzHeader from "./Components/EzHeader/EzHeader";
 function App() {
   return (
     <BrowserRouter>
@@ -105,6 +108,9 @@ function App() {
         <Route path="/gift-voucher-banner" element={<GiftVoucherBanner />} />
         <Route path="/trust-section" element={<TrustSection />} />
         <Route path="/drive-search-section" element={<DriveSearchSection />} />
+        <Route path="/learner-registration" element={<LearnerRegistrationPage />} />
+        <Route path="/ezl-payment" element={<EzlPaymentPage />} />
+        <Route path="/ez-header" element={<EzHeader />} />
       </Routes>
     </BrowserRouter>
   );

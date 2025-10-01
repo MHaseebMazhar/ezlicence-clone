@@ -1,0 +1,45 @@
+/* Logo */
+.ez-logo {
+  width: 140px;  /* fixed width */
+  height: auto;
+  margin-left: 24px;
+  cursor: pointer;
+}
+
+/* Header container */
+.ez-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background: #fff;
+  border-bottom: 1px solid #D2D6DB;
+  width: 100%;
+  height: 56px;
+  box-sizing: border-box;
+}
+
+/* Right section (icon + login) */
+.ez-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* User icon */
+.ez-user-icon {
+  color: #475467;
+}
+
+/* Login link */
+.ez-login-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #475467;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ez-login-link:hover {
+  color: #1d4ed8; /* blue hover */
+}

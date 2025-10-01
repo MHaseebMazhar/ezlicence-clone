@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="left-section">
           <div className="logo" onClick={() => (window.location.href = "/")}>
             <img
-              src="/logo-ezlicence-simple-coloured-4f13463a55c628f757204c7ee1e6efb980c37ea9070beac8b9e5166fda60538f.png"
+              src="/SilentSolhd-1.png"
               alt="Logo"
             />
           </div>

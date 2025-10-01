@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-about">
           <div className="logo">
             <img
-              src="/logo-ezlicence-simple-coloured-4f13463a55c628f757204c7ee1e6efb980c37ea9070beac8b9e5166fda60538f.png"
+              src="/SilentSolhd-1.png"
               alt="EzLicence Logo"
               className="logo-img"
             />
@@ -115,7 +115,7 @@ const Footer = () => {
 
       {/* Bottom bar */}
       <div className="footer-bottom">
-        <p>&copy; Ezlicence UK Ltd 2025</p>
+        <p>&copy; Silent Sol Pvt Ltd 2025</p>
         <div className="bottom-links">
           <a href="https://www.ezlicence.co.uk/">Privacy Policy</a>
           <a href="https://www.ezlicence.co.uk/">Terms and Conditions</a>

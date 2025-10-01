@@ -23,7 +23,7 @@ const [isOpen, setIsOpen] = useState(false);
       <header className="header-support">
         <div className="logo-container3" onClick={HandleEzlicenseUKhome}>
           <img
-            src="/logo-ezlicence-simple-coloured-4f13463a55c628f757204c7ee1e6efb980c37ea9070beac8b9e5166fda60538f.png"
+            src="/SilentSolhd-1.png"
             alt="EzLicence Logo"
             className="logo3"
           />

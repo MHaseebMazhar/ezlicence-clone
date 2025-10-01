@@ -148,3 +148,21 @@
   cursor: not-allowed;
   font-weight: bold;
 }
+.continue-btn {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: not-allowed;
+  background: #ddd;
+  color: #666;
+}
+
+/* Active state when enabled */
+.continue-btn.active {
+  background: #fbbf24;
+  color: #000;
+  cursor: pointer;
+}
