@@ -41,6 +41,11 @@ import InstructorSlider from "./Components/Navbar/DrivingLessons/InstructorSlide
 import EzLicenceProcess from "./Components/Navbar/DrivingLessons/EzLicenceProcess/EzLicenceProcess";
 import FeaturedLogos from "./Components/Navbar/DrivingLessons/FeaturedLogos/FeaturedLogos";
 import DrivingWhyChooseSection from "./Components/Navbar/DrivingLessons/DrivingWhyChooseSection/DrivingWhyChooseSection";
+import GiftVoucherProcess from "./Components/GiftVouchers/GiftVoucherProcess/GiftVoucherProcess";
+import GiftVoucherCTA from "./Components/GiftVouchers/GiftVoucherCTA/GiftVoucherCTA";
+import GiftVoucherBanner from "./Components/GiftVouchers/GiftVoucherBanner/GiftVoucherBanner";
+import TrustSection from "./Components/Results/TrustSection/TrustSection";  
+import DriveSearchSection from "./Components/Results/DriveSearchSection/DriveSearchSection";
 function App() {
   return (
     <BrowserRouter>
@@ -95,6 +100,11 @@ function App() {
         <Route path="/ez-licence-process" element={<EzLicenceProcess />} />
         <Route path="/featured-logos" element={<FeaturedLogos />} />
         <Route path="/driving-why-choose-section" element={<DrivingWhyChooseSection />} />
+        <Route path="/gift-voucher-process" element={<GiftVoucherProcess />} />
+        <Route path="/gift-voucher-cta" element={<GiftVoucherCTA />} />
+        <Route path="/gift-voucher-banner" element={<GiftVoucherBanner />} />
+        <Route path="/trust-section" element={<TrustSection />} />
+        <Route path="/drive-search-section" element={<DriveSearchSection />} />
       </Routes>
     </BrowserRouter>
   );

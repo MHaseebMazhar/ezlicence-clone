@@ -1,6 +1,6 @@
 .giftvoucher-container {
   font-family: Arial, sans-serif;
-  background: #1e293b;
+
   color: #fff;
 }
 
@@ -101,32 +101,6 @@
   background: #facc15;
 }
 
-/* RIGHT SIDE */
-.giftvoucher-right {
-  flex: 1;
-}
-.giftvoucher-right h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-.giftvoucher-right p {
-  color: #ddd;
-  margin-bottom: 15px;
-}
-.giftvoucher-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #facc15;
-  color: #111;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-}
-.giftvoucher-footnotes {
-  margin-top: 15px;
-  font-size: 12px;
-  color: #bbb;
-}
 
 /* SEARCH BAR */
 .giftvoucher-searchbar {
@@ -134,7 +108,7 @@
   color: #111;
   text-align: center;
   padding: 20px;
-  margin-top: 30px;
+ 
 }
 .giftvoucher-searchbar form {
   display: flex;

@@ -3,6 +3,8 @@ import {Link, useLocation } from "react-router-dom";
 import "./Result.css";
 import Topbar from "../Topbar/Topbar";
 import Navbar from "../Navbar/Navbar";
+import TrustSection from "./TrustSection/TrustSection";
+import DriveSearchSection from "./DriveSearchSection/DriveSearchSection";
 const Results = () => {
   const location = useLocation();
   const { postcode, testDate } = location.state || {};
@@ -65,6 +67,12 @@ const Results = () => {
           ))}
         </div>
       </div>
+      <TrustSection/>
+      <DriveSearchSection/>
+      <footer>
+  <div className="footer-divider"></div>
+  <p>&copy; Excellence UK Ltd</p>
+</footer>
     </>
   );
 };
