@@ -28,9 +28,10 @@ const SubmitRequest = () => {
     }
   }, []);
 
-const HandleSubmitRequest = () => {
-  setIsOpen(true); // ✅ Open the iframe popup instead of redirect
-};
+  const HandleSubmitRequest = () => {
+    localStorage.setItem("fromContactUs", "true");
+    window.location.href = "/submit-request";
+  };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
