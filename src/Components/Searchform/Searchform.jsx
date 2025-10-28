@@ -51,7 +51,8 @@ const Searchform = () => {
             placeholder="Enter your postcode"
             value={postcode}
             onChange={(e) => fetchSuggestions(e.target.value)}
-            autoComplete="off"
+            autoComplete="on"
+            required
           />
           <span className="icon1">▼</span>
         </div>
