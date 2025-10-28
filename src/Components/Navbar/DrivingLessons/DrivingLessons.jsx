@@ -102,7 +102,7 @@ const handleSearch = () => {
 
               {/* Search Button */}
                <button
-        className="search-button"
+        className="dlp-search-btn"
         onClick={handleSearch}
         disabled={!postcode}
       >
