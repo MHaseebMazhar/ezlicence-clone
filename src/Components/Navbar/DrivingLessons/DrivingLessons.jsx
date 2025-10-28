@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./DrivingLessons.css";
 import Topbar from "../../Topbar/Topbar";
 import Navbar from "../Navbar";
+import { useNavigate } from "react-router-dom";
 import DrivingInstructorPage from "./DrivingInstructorPage/DrivingInstructorPage";
 import DrivingStats from "./DrivingStats/DrivingStats";
 import SearchInstructor from "../../TestPakages/SearchInstructor/SearchInstructor";
@@ -13,7 +14,8 @@ import Footer from "../../Footer/Footer";
 export default function DrivingLessons() {
   const [transmissionType, setTransmissionType] = useState("auto");
   const [postcode, setPostcode] = useState("");
-
+ 
+  const navigate = useNavigate();
   // Determine city: prefer sessionStorage (set by navbar), then query string, then default
   let cityFromQuery = "London";
   try {
@@ -28,7 +30,11 @@ export default function DrivingLessons() {
     const params = new URLSearchParams(window.location.search);
     cityFromQuery = params.get("city") || "London";
   }
-
+const handleSearch = () => {
+    if (postcode) {
+      navigate("/results", { state: { postcode } });
+    }
+  };
   return (
     <>
       <Topbar />
@@ -95,9 +101,14 @@ export default function DrivingLessons() {
               </div>
 
               {/* Search Button */}
-              <button className="dlp-search-btn">
-                <span style={{ fontSize: "18px" }}>🔍</span> Search
-              </button>
+               <button
+        className="search-button"
+        onClick={handleSearch}
+        disabled={!postcode}
+      >
+        <span className="search-icon">🔍</span> Search
+      </button>
+
             </div>
 
             {/* Google Review */}
