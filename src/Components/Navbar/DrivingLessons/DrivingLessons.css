@@ -208,30 +208,64 @@
   display: block;
   object-fit: cover;
 }
-/* Responsive positioning for large screens */
+/* Better layout for large screens */
 @media (min-width: 1200px) {
   .dlp-google-review {
     bottom: -50px;
     left: 80px;
     transform: scale(1.1);
+    padding: 20px 35px;
+  }
+
+  .dlp-review-text {
+    font-size: 16px;
+    color: #222;
+    font-weight: 500;
+  }
+
+  .dlp-stars {
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #ffc107;
+    font-weight: bold;
   }
 }
 
-/* Extra-large screens (4K monitors etc.) */
+/* Very large (4K) screens */
 @media (min-width: 1600px) {
   .dlp-google-review {
-    bottom: -60px;
+    bottom: -70px;
     left: 120px;
-    transform: scale(1.2);
+    transform: scale(1.25);
+  }
+
+  .dlp-review-text {
+    font-size: 18px;
+  }
+
+  .dlp-stars {
+    font-size: 20px;
   }
 }
 
-/* Tablets and small laptops — keep centered and not cut off */
+/* Tablets & below */
 @media (max-width: 991px) {
   .dlp-google-review {
     position: static;
     margin: 30px auto 0;
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
     transform: none;
+  }
+
+  .dlp-review-text {
+    font-size: 14px;
+  }
+
+  .dlp-stars {
+    font-size: 16px;
   }
 }
