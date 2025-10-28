@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./SubmitRequest.css";
 
 const SubmitRequest = () => {
-const defaultOption = window.performance?.navigation?.type === 1 ? "-" : "I am learning to drive";
-const [selectedOption, setSelectedOption] = useState(defaultOption);
-
+  const [selectedOption, setSelectedOption] = useState("-");
   const [searchValue, setSearchValue] = useState("");
   const [showMessage, setShowMessage] = useState(false);
-const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
   const options = [
     "-",
     "I am learning to drive",
@@ -16,38 +15,47 @@ const [isOpen, setIsOpen] = useState(false);
     "I have a Media / PR enquiry",
   ];
 
-  const HandleSubmitRequest = () => {
-    window.location.href = "/submit-request";
-  };
+  // ✅ Check source on mount
+  useEffect(() => {
+    const cameFromContact = localStorage.getItem("fromContactUs");
+    if (cameFromContact) {
+      // from "Contact Us"
+      setSelectedOption("-");
+      localStorage.removeItem("fromContactUs");
+    } else {
+      // direct visit or from other pages
+      setSelectedOption("I am learning to drive");
+    }
+  }, []);
+
+const HandleSubmitRequest = () => {
+  setIsOpen(true); // ✅ Open the iframe popup instead of redirect
+};
 
   const handleFormSubmit = (e) => {
-    e.preventDefault(); // ✅ prevent default submit
+    e.preventDefault();
     setShowMessage(true);
-
-    // ✅ 2s baad page refresh
     setTimeout(() => {
       window.location.reload();
     }, 500);
   };
+
   const HandleEzlicenseUK = () => {
     window.location.href = "/support";
-  }
-    const Footer1 = () => (
-    <footer className="footer-support">
-      <span className="footer-support-handle" onClick={HandleEzlicenseUK}>EzLicence UK</span>
+  };
 
-      {/* Floating Support Button */}
+  const Footer1 = () => (
+    <footer className="footer-support">
+      <span className="footer-support-handle" onClick={HandleEzlicenseUK}>
+        EzLicence UK
+      </span>
+
       {!isOpen && (
-        <button
-          className="support-button"
-          onClick={() => setIsOpen(true)}
-        >
-          
+        <button className="support-button" onClick={() => setIsOpen(true)}>
           Support
         </button>
       )}
 
-      {/* Iframe Widget */}
       {isOpen && (
         <div className="iframe-container">
           <iframe
@@ -111,10 +119,7 @@ const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      {/* ✅ Success message top right */}
-      {showMessage && (
-        <div className="success-message">Successfully Submitted</div>
-      )}
+      {showMessage && <div className="success-message">Successfully Submitted</div>}
 
       <header className="header-support">
         <div className="logo-container3">
@@ -132,7 +137,6 @@ const [isOpen, setIsOpen] = useState(false);
       </header>
 
       <div className="submit-request-container">
-        {/* 🔍 Search input */}
         <div className="submit-request-search">
           <input
             type="text"
@@ -142,8 +146,12 @@ const [isOpen, setIsOpen] = useState(false);
             onChange={(e) => setSearchValue(e.target.value)}
           />
         </div>
+
         <nav className="submit-request-breadcrumb">
-          <button className="login-link1"onClick={HandleEzlicenseUK}>EzLicence UK</button>  &gt; Submit a request
+          <button className="login-link1" onClick={HandleEzlicenseUK}>
+            EzLicence UK
+          </button>{" "}
+          &gt; Submit a request
         </nav>
 
         <h1 className="submit-request-title">Submit a request</h1>
@@ -164,7 +172,7 @@ const [isOpen, setIsOpen] = useState(false);
           ))}
         </select>
 
-        {/* Conditional Form */}
+        {/* ✅ Conditional Form Rendering */}
         {[
           "I am learning to drive",
           "I am a Driving Instructor",
@@ -173,30 +181,16 @@ const [isOpen, setIsOpen] = useState(false);
         ].includes(selectedOption) && (
           <form className="submit-request-form" onSubmit={handleFormSubmit}>
             <label>Email address</label>
-            <input
-              type="email"
-              className="form-input"
-              placeholder="Your email address"
-              required
-            />
+            <input type="email" className="form-input" placeholder="Your email address" required />
 
             <label>First name</label>
-            <input
-              type="text"
-              className="form-input"
-              placeholder="First name"
-              required
-            />
+            <input type="text" className="form-input" placeholder="First name" required />
 
             <label>Surname</label>
             <input type="text" className="form-input" placeholder="Surname" />
 
             <label>Mobile phone number</label>
-            <input
-              type="tel"
-              className="form-input"
-              placeholder="Mobile phone number"
-            />
+            <input type="tel" className="form-input" placeholder="Mobile phone number" />
 
             <label>Please select your type of enquiry</label>
             <select className="form-input">
@@ -210,22 +204,12 @@ const [isOpen, setIsOpen] = useState(false);
             </select>
 
             <label>Subject or topic (optional)</label>
-            <input
-              type="text"
-              className="form-input"
-              placeholder="Subject or topic"
-            />
+            <input type="text" className="form-input" placeholder="Subject or topic" />
 
             <label>
-              Tell us more, providing as much detail as you can will allow us to
-              help you as quickly as possible. *
+              Tell us more, providing as much detail as you can will allow us to help you as quickly as possible. *
             </label>
-            <textarea
-              className="form-input textarea"
-              rows="5"
-              placeholder="Write your message here"
-              required
-            ></textarea>
+            <textarea className="form-input textarea" rows="5" placeholder="Write your message here" required></textarea>
 
             <label>Attachments (optional)</label>
             <input type="file" className="form-input-file" />
@@ -237,7 +221,6 @@ const [isOpen, setIsOpen] = useState(false);
         )}
       </div>
 
-      {/* ✅ Footer */}
       <Footer1 />
     </>
   );
