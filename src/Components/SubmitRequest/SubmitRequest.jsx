@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./SubmitRequest.css";
 
 const SubmitRequest = () => {
-  const [selectedOption, setSelectedOption] = useState("");
+const defaultOption = window.performance?.navigation?.type === 1 ? "-" : "I am learning to drive";
+const [selectedOption, setSelectedOption] = useState(defaultOption);
+
   const [searchValue, setSearchValue] = useState("");
   const [showMessage, setShowMessage] = useState(false);
 const [isOpen, setIsOpen] = useState(false);
