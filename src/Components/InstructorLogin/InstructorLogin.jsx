@@ -30,7 +30,7 @@ export default function InstructorLogin() {
           <h2 className="il-heading">Instructor Login</h2>
           <p className="il-register">
             Want to instruct with EzLicence?{" "}
-            <a href="/" className="il-link">Register your interest</a>
+            <a href="/submit-request" className="il-link">Register your interest</a>
           </p>
 
           <form onSubmit={handleSubmit}>
