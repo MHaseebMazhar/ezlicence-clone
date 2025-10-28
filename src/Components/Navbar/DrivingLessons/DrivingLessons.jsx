@@ -30,11 +30,7 @@ export default function DrivingLessons() {
     const params = new URLSearchParams(window.location.search);
     cityFromQuery = params.get("city") || "London";
   }
-const handleSearch = () => {
-    if (postcode) {
-      navigate("/results", { state: { postcode } });
-    }
-  };
+
   return (
     <>
       <Topbar />
@@ -89,25 +85,29 @@ const handleSearch = () => {
                 </button>
               </div>
 
-              {/* Input */}
-              <div className="dlp-input-group">
-                <input
-                  type="text"
-                  placeholder="Enter your postcode"
-                  value={postcode}
-                  onChange={(e) => setPostcode(e.target.value)}
-                  className="dlp-input"
-                />
-              </div>
+              <form
+  onSubmit={(e) => {
+    e.preventDefault();
+    if (postcode.trim()) {
+      navigate("/results", { state: { postcode } });
+    }
+  }}
+>
+  <div className="dlp-input-group">
+    <input
+      type="text"
+      placeholder="Enter your postcode"
+      value={postcode}
+      onChange={(e) => setPostcode(e.target.value)}
+      className="dlp-input"
+      required   // 👈 this makes it show “Please fill out this field”
+    />
+  </div>
 
-              {/* Search Button */}
-               <button
-        className="dlp-search-btn"
-        onClick={handleSearch}
-        disabled={!postcode}
-      >
-        <span className="search-icon">🔍</span> Search
-      </button>
+  <button type="submit" className="dlp-search-btn">
+    <span className="search-icon">🔍</span> Search
+  </button>
+</form>
 
             </div>
 
