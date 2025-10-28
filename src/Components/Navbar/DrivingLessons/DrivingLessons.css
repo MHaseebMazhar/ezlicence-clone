@@ -208,3 +208,30 @@
   display: block;
   object-fit: cover;
 }
+/* Responsive positioning for large screens */
+@media (min-width: 1200px) {
+  .dlp-google-review {
+    bottom: -50px;
+    left: 80px;
+    transform: scale(1.1);
+  }
+}
+
+/* Extra-large screens (4K monitors etc.) */
+@media (min-width: 1600px) {
+  .dlp-google-review {
+    bottom: -60px;
+    left: 120px;
+    transform: scale(1.2);
+  }
+}
+
+/* Tablets and small laptops — keep centered and not cut off */
+@media (max-width: 991px) {
+  .dlp-google-review {
+    position: static;
+    margin: 30px auto 0;
+    display: inline-flex;
+    transform: none;
+  }
+}
