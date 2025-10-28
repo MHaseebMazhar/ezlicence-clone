@@ -8,8 +8,11 @@ const Searchform = () => {
   const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
 
-  const handleSearch = () => {
-    if (postcode && testDate) {
+  const handleSearch = (e) => {
+    e.preventDefault();
+
+    // if form is valid, navigate
+    if (postcode.trim() && testDate) {
       navigate("/results", { state: { postcode, testDate } });
     }
   };
@@ -40,7 +43,7 @@ const Searchform = () => {
   };
 
   return (
-    <div className="search-form-container">
+    <form className="search-form-container" onSubmit={handleSearch}>
       {/* Location */}
       <div className="form-group">
         <label htmlFor="location">Pick-up Location</label>
@@ -52,7 +55,7 @@ const Searchform = () => {
             value={postcode}
             onChange={(e) => fetchSuggestions(e.target.value)}
             autoComplete="on"
-            required
+            required   // ✅ browser "please fill out" message
           />
           <span className="icon1">▼</span>
         </div>
@@ -96,20 +99,17 @@ const Searchform = () => {
             id="test-date"
             value={testDate}
             onChange={(e) => setTestDate(e.target.value)}
+            required   // ✅ browser validation for date
           />
           <span className="icon1">▼</span>
         </div>
       </div>
 
       {/* Search Button */}
-      <button
-        className="search-button"
-        onClick={handleSearch}
-        disabled={!postcode || !testDate}
-      >
+      <button type="submit" className="search-button">
         <span className="search-icon">🔍</span> Search
       </button>
-    </div>
+    </form>
   );
 };
 
