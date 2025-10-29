@@ -28,10 +28,11 @@ const SubmitRequest = () => {
     }
   }, []);
 
-  const HandleSubmitRequest = () => {
-    localStorage.setItem("fromContactUs", "true");
-    window.location.href = "/submit-request";
-  };
+ const HandleSubmitRequest = () => {
+  setSelectedOption("I am learning to drive"); // ✅ force show form
+  setIsOpen(false); // ✅ close iframe if open
+  window.scrollTo({ top: 0, behavior: "smooth" }); // optional: scroll to top
+};
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
